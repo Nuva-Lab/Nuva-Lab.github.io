@@ -1,3 +1,7 @@
+body {
+    background-color: #2B559F
+}
+
 #main {
     align-items: center;
     display: flex;
@@ -8,11 +12,13 @@
 }
 
 #logo {
+    color: white;
     font-family: 'Roboto Slab', Serif;
     font-size: 58px;
 }
 
 #pl {
+    color: white;
     font-family: 'Roboto Slab', Serif;
     font-size: 25px;
 }
