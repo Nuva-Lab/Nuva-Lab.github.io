@@ -1,12 +1,14 @@
 body {
-    background-color: #2B559F
+    background-color: #2B559F;
+    display: flex;
+    flex-direction: column;
 }
 
 #main {
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    flex-grow: 1;
     justify-content: center;
     width: 100%;
 }
@@ -21,4 +23,20 @@ body {
     color: white;
     font-family: 'Roboto Slab', Serif;
     font-size: 25px;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    font-family: ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 13px;
+}
+
+#company {
+    flex-grow: 1;
+    margin: 20px;
+}
+
+#contact {
+    margin: 20px;
 }
