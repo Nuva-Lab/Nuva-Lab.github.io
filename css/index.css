@@ -2,6 +2,7 @@ body {
     background-color: #2B559F;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 #main {
@@ -26,6 +27,7 @@ body {
 }
 
 #footer {
+    color: #ddd;
     display: flex;
     flex-direction: row;
     font-family: ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -39,4 +41,8 @@ body {
 
 #contact {
     margin: 20px;
+}
+
+#contact a {
+    color: #ddd;
 }
