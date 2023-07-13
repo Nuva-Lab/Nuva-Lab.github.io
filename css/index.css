@@ -1,9 +1,18 @@
+#main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
 #logo {
-    font-family: 'Roboto';
+    font-family: 'Roboto Slab', Serif;
     font-size: 58px;
 }
 
 #pl {
-    font-family: 'Roboto';
+    font-family: 'Roboto Slab', Serif;
     font-size: 25px;
 }
