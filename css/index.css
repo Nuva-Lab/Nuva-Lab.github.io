@@ -18,6 +18,13 @@ body {
 }
 
 #logo {
+    height: 80px;
+    left: 20px;
+    position: absolute;
+    top: 20px;
+}
+
+#company {
     color: white;
     font-family: 'Roboto Slab', Serif;
     font-size: 5vw;
