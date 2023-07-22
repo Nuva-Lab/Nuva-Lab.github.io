@@ -1,8 +1,5 @@
 body {
-    background-image: url('/image/bg.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: #07101b;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -18,7 +15,7 @@ body {
 }
 
 #logo {
-    height: 80px;
+    height: 150px;
     left: 20px;
     position: absolute;
     top: 20px;
