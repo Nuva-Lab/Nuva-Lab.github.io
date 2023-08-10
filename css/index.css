@@ -1,5 +1,8 @@
 body {
-    background-color: #07101b;
+    background-image: url('/image/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     height: 100%;
