@@ -37,11 +37,10 @@ body {
 }
 
 #footer {
-    color: #ddd;
+    align-items: center;
     display: flex;
     flex-direction: row;
-    font-family: ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-    font-size: 13px;
+    justify-content: center;
 }
 
 #company {
@@ -68,15 +67,16 @@ body {
 }
 
 #social-icons a {
-    background-image: url(../img/social-icons.png);
+    background-image: url(/image/icons.png);
     background-repeat: no-repeat;
+    background-size: 114px 38px;
     display: block;
-    height: 58px;
-    width: 58px;
+    height: 38px;
+    width: 38px;
 }
 
 #social-icons .youtube {
-    background-position: -58px 0;
+    background-position: -38px 0;
 }
 
 #social-icons .twitter {
@@ -84,5 +84,5 @@ body {
 }
 
 #social-icons .email {
-    background-position: -116px 0;
+    background-position: -76px 0;
 }
