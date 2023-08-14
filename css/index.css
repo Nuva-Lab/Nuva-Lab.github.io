@@ -56,3 +56,33 @@ body {
 #contact a {
     color: #ddd;
 }
+
+#social-icons {
+    list-style: none;
+    margin 0;
+    padding: 0;
+}
+
+#social-icons li {
+    display: inline-block;
+}
+
+#social-icons a {
+    background-image: url(../img/social-icons.png);
+    background-repeat: no-repeat;
+    display: block;
+    height: 58px;
+    width: 58px;
+}
+
+#social-icons .youtube {
+    background-position: -58px 0;
+}
+
+#social-icons .twitter {
+    background-position: 0 0;
+}
+
+#social-icons .email {
+    background-position: -116px 0;
+}
