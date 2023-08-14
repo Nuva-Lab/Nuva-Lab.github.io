@@ -79,6 +79,10 @@ body {
     background-position: -38px 0;
 }
 
+#social-icons .discord {
+    background-position: -114px 0;
+}
+
 #social-icons .twitter {
     background-position: 0 0;
 }
