@@ -1,23 +1,54 @@
 <html>
   <head>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/index.css">
   </head>
   <title>Nuva Lab</title>
   <body>
-    <div id="main">
-      <img id="logo" src="/image/logo.png"></img>
-      <h1 id="name">Nuva Lab</h1>
-      <div id="pl">Building the Future of AI-Powered Entertainment</div>
+    <div class="w3-top">
+      <div class="w3-bar" id="navbar">
+        <div class="logo">NUVA</div>
+      </div>
     </div>
-    <div id="footer">
-      <ul id="social-icons">
-	<li><a class="youtube" href="https://www.youtube.com/@NuvaLab" target="_blank"></a></li>
-	<li><a class="discord" href="https://discord.gg/myk6gYC5" target="_blank"></a></li>
-        <li><a class="twitter" href="https://www.twitter.com/nuvalab" target="_blank"></a></li>
-	<li><a class="email" href="mailto:info@nuvalab.ai"></a></li>
-      </ul>
+
+    <header class="bg w3-display-container" id="home">
+      <div class="w3-display-left w3-text-white" style="padding:48px">
+        <span class="w3-jumbo w3-hide-small">Building the future of AI-powered entertainment</span><br>
+        <span class="w3-xxlarge w3-hide-large w3-hide-medium">Building the future of AI-powered entertainment</span><br>
+        <p><a href="#demo" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">See Demo</a></p>
+      </div> 
+
+      <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+        <ul id="social-icons">
+          <li><a class="youtube" href="https://www.youtube.com/@NuvaLab" target="_blank"></a></li>
+          <li><a class="discord" href="https://discord.gg/myk6gYC5" target="_blank"></a></li>
+          <li><a class="twitter" href="https://www.twitter.com/nuvalab" target="_blank"></a></li>
+          <li><a class="email" href="mailto:info@nuvalab.ai"></a></li>  
+        </ul>
+      </div>
+    </header>
+
+    <!-- Demo Section -->
+    <div class="w3-container w3-light-grey" style="padding:128px 16px" id="demo">
+      <div class="w3-row-padding">
+        <div class="w3-col m5">
+          <h3>Join Waitlist</h3>
+          <p>We are working hard to polish the demo. Want to be the first one to try it?</p>
+          <p><a href="https://forms.gle/si61szefS5Pr4Xc18" class="w3-button w3-black" target="_blank"><i class="fa fa-th"> </i> Follow Our Progress</a></p>
+        </div>
+        <div class="w3-col m7 demo-video">
+          <iframe width="600" height="366" src="https://www.youtube.com/embed/auJsZSZWD7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
+
+    <footer class="w3-center w3-black w3-padding-8">
+      <p>&#xa9; Nuva Lab 08/2023</p>
+    </footer>
   </body>
 </html>
