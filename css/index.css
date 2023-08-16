@@ -26,8 +26,13 @@ body, html {
     margin-left: 20px;
 }
 
-.demo-video {
+.video-container {
     text-align: center;
+}
+
+.video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
 }
 
 #social-icons {
