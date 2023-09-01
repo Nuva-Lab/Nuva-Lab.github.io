@@ -26,6 +26,11 @@ body, html {
     margin-left: 20px;
 }
 
+.signup {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
 .video-container {
     text-align: center;
 }
