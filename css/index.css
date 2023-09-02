@@ -28,7 +28,17 @@ body, html {
 
 .signup {
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
+}
+
+#email {
+    display: inline-block;
+    margin-right: 10px;
+    width: 20%;
+}
+
+#waitlist-form-status {
+    font-weight: bold;
 }
 
 .video-container {
