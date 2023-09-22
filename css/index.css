@@ -21,9 +21,8 @@ body, html {
 }
 
 .logo {
-    font-family: "Roboto";
-    font-size: 2vw;
-    margin-left: 20px;
+    height: 50px;
+    margin: 10px 0 0 20px;
 }
 
 .signup {
