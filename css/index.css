@@ -1,18 +1,25 @@
-body, h1, h2, h3, h4, h5, h6 {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Raleway", sans-serif
 }
 
-body, html {
+body,
+html {
     height: 100%;
     line-height: 1.8;
 }
 
 /* Full height image header */
 .bg {
-  background-position: center;
-  background-size: cover;
-  background-image: url("/image/bg.jpg");
-  min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/image/bg.jpg");
+    min-height: 100%;
 }
 
 #navbar {
@@ -83,4 +90,18 @@ body, html {
 
 #social-icons .email {
     background-position: -76px 0;
+}
+
+.privacy-policy {
+    margin-top: 10px;
+    /* Or any desired margin */
+}
+
+.privacy-policy a {
+    color: white;
+    text-decoration: none;
+}
+
+.privacy-policy a:hover {
+    text-decoration: underline;
 }
