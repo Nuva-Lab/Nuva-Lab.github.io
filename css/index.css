@@ -92,16 +92,15 @@ html {
     background-position: -76px 0;
 }
 
-.privacy-policy {
-    margin-top: 10px;
-    /* Or any desired margin */
+footer {
+    margin-top: 30px;
 }
 
-.privacy-policy a {
-    color: white;
+a.privacy-policy {
+    margin-left: 30px;
     text-decoration: none;
 }
 
-.privacy-policy a:hover {
+a.privacy-policy:hover {
     text-decoration: underline;
 }
