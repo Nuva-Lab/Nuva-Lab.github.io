@@ -40,10 +40,19 @@ html {
 
 .title {
     font-size: 5vw;
+    font-family: lato, -apple-system, "system-ui", "segoe ui", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.what-if {
+    color: rgb(255, 179, 0);
+    /* Replace #FF0000 with the color you want */
 }
 
 .subtitle {
     font-size: 2vw;
+    font-family: lato, -apple-system, "system-ui", "segoe ui", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: bold;
 }
 
 .signup-text {
