@@ -35,8 +35,11 @@ html {
 
 .signup {
     text-align: center;
-    padding-top: 250px;
+    position: relative;
+    margin-top: 250px;
     padding-bottom: 30px;
+    z-index: 10;
+    /* This value might need to be higher depending on other elements' z-index values */
 }
 
 #email {
