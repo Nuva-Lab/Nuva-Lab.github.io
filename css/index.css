@@ -38,6 +38,18 @@ html {
     padding-bottom: 80px;
 }
 
+.title {
+    font-size: 5vw;
+}
+
+.subtitle {
+    font-size: 2vw;
+}
+
+.signup-text {
+    font-size: 1.5vw;
+}
+
 .logo {
     height: 50px;
     margin: 10px 0 0 20px;
