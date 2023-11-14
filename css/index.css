@@ -22,10 +22,20 @@ html {
     min-height: calc(100% - 60px);
 }
 
+#home {
+    flex-direction: column;
+    text-align: center;
+}
+
 #navbar {
     color: white;
     background-color: #07549F;
     height: 60px;
+}
+
+.punchline {
+    margin: auto;
+    padding-bottom: 80px;
 }
 
 .logo {
@@ -35,8 +45,6 @@ html {
 
 .signup {
     text-align: center;
-    position: relative;
-    margin-top: 250px;
     padding-bottom: 30px;
     z-index: 10;
     /* This value might need to be higher depending on other elements' z-index values */
@@ -135,6 +143,6 @@ a.privacy-policy:hover {
 }
 
 #prototype img {
-    height: 366px;
-    width: 600px;
+    width: 80%;
+    max-width: 600px;
 }
