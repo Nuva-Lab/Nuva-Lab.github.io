@@ -5,7 +5,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Raleway", sans-serif
+    font-family: "Oneset", sans-serif
 }
 
 body,
@@ -35,7 +35,11 @@ html {
 
 .signup {
     text-align: center;
+    position: relative;
+    margin-top: 250px;
     padding-bottom: 30px;
+    z-index: 10;
+    /* This value might need to be higher depending on other elements' z-index values */
 }
 
 #email {
@@ -56,6 +60,16 @@ html {
 .video {
     aspect-ratio: 16 / 9;
     width: 100%;
+}
+
+#social-icons {
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    /* Adjust this value as needed for vertical alignment */
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 #social-icons {
@@ -91,6 +105,15 @@ html {
 
 #social-icons .email {
     background-position: -76px 0;
+}
+
+.w3-display-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    /* This centers the text inside the div */
 }
 
 footer {
