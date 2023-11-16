@@ -16,10 +16,7 @@ html {
 
 /* Full height image header */
 .bg {
-    background-position: center;
-    background-size: cover;
-    background-image: url("/image/bg.jpg");
-    min-height: calc(100% - 60px);
+    height: calc(100% - 60px) !important;
 }
 
 #home {
@@ -28,8 +25,6 @@ html {
 }
 
 #navbar {
-    color: white;
-    background-color: #07549F;
     height: 60px;
 }
 
@@ -46,7 +41,6 @@ html {
 
 .what-if {
     color: rgb(255, 179, 0);
-    /* Replace #FF0000 with the color you want */
 }
 
 .subtitle {
