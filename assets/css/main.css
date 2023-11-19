@@ -16,16 +16,12 @@ html {
 
 /* Full height image header */
 .bg {
-    height: calc(100% - 60px) !important;
+    height: calc(100% - 60px - 40px) !important;
 }
 
 #home {
     flex-direction: column;
     text-align: center;
-}
-
-#navbar {
-    height: 60px;
 }
 
 .punchline {
@@ -55,7 +51,7 @@ html {
 
 .logo {
     height: 50px;
-    margin: 10px 0 0 20px;
+    margin: 0 0 0 20px;
 }
 
 .signup {
@@ -85,28 +81,45 @@ html {
     width: 100%;
 }
 
-#social-icons {
-    position: absolute;
-    right: 40px;
-    top: 10px;
+#navbar {
+    align-items: center;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+}
+
+#social-icons, #menu {
     /* Adjust this value as needed for vertical alignment */
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#social-icons {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#social-icons li {
+#social-icons li, #menu li {
     display: inline-block;
 }
 
+#menu {
+    flex-grow: 1;
+    margin-left: 30px;
+}
+
+#menu li {
+    margin-right: 10px;
+}
+
+#menu a {
+    color: #555;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#social-icons {
+    margin-right: 30px;
+}
+
 #social-icons a {
-    background-image: url(/image/icons.png);
+    background-image: url(/assets/image/icons.png);
     background-repeat: no-repeat;
     background-size: auto 38px;
     display: block;
@@ -140,7 +153,8 @@ html {
 }
 
 footer {
-    margin-top: 30px;
+    height: 40px;
+    padding: 10px 0;
 }
 
 a.privacy-policy {
