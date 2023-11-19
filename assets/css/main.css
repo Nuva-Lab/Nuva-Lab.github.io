@@ -238,9 +238,9 @@ a.privacy-policy:hover {
     display: block;
     font-size: 13px;
     color: #999;
+    white-space: nowrap;
 }
 
-.post .date::before {
-    content: "\2022";
-    padding: 0 0.5em;
+.post .date i {
+    margin-left: 20px;
 }
