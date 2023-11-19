@@ -232,6 +232,7 @@ a.privacy-policy:hover {
 .post .author {
     font-weight: 400;
     opacity: .5;
+    white-space: nowrap;
 }
 
 .post .date {
