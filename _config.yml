@@ -1,12 +1,6 @@
 title: Nuva Lab # Shown in header on pages with full_logo: true
-short_logo: PF. # Shown in header on all pages by default unless full_logo: true is set
-description: > # The description for your site
-  Live out your what-ifs. AI powered interactive story telling platform.
-url: "https://www.nuvalab.ai" # Site base URL
 
-markdown: kramdown
-
-defaults: # Recommended defaults, you may set your own
+defaults:
   -
     scope:
       path: _posts
