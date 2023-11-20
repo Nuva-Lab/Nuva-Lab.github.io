@@ -440,15 +440,13 @@ a.privacy-policy:hover {
 }
 
 .post a {
-    color: #065f46;
+    color: #4183c4;
     /* Notion-like color for links */
     text-decoration: none;
 }
 
 .post a:hover,
 .post a:focus {
-    color: #dd4b39;
-    /* Color change on hover/focus */
     text-decoration: underline;
     /* Underline for accessibility */
 }
@@ -461,13 +459,10 @@ a.privacy-policy:hover {
     margin-top: 15px;
     /* Space between content and info */
     display: flex;
-    justify-content: space-between;
 }
 
-.post .author,
 .post .date {
-    color: #777;
-    /* Slightly lighter color for meta */
+    margin-left: 10px;
 }
 
 /* Responsive adjustments */
