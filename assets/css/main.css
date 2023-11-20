@@ -461,6 +461,10 @@ a.privacy-policy:hover {
     margin-left: 10px;
 }
 
+.post p {
+    text-align: justify;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .post {
