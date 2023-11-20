@@ -203,90 +203,76 @@ a.privacy-policy:hover {
     max-width: 600px;
 }
 
+/* Blog Posts */
 #posts {
-    margin-top: 20px;
+    margin-top: 40px;
+    /* Increased margin for better separation */
 }
 
 .post {
     max-width: 800px;
-    /* Adjusted for optimal reading width */
-    margin: 20px auto;
-    /* Uniform margin for top, bottom, and sides */
-    position: relative;
-    padding: 30px;
-    /* Uniform padding */
-    list-style: none;
-    border-bottom: 1px solid #eee;
+    margin: 40px auto;
+    /* Increased margin for better spacing */
+    padding: 20px;
+    /* Reduced padding for a cleaner look */
     background-color: #fff;
-    /* Optional: Adds background color */
+    border-radius: 8px;
+    /* Optional: Adds rounded corners for a softer look */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Optional: Adds subtle shadow for depth */
+    /* Subtle shadow for depth */
+    font-family: 'Open Sans', sans-serif;
+    /* Notion-like font */
 }
 
 .post .title {
     color: #333;
-    /* Darker color for better readability */
-    cursor: pointer;
-    font-size: 28px;
-    /* Slightly smaller for standardization */
-    font-weight: bold;
-    transition: color 0.3s ease;
-    /* Transition only for color */
+    font-size: 26px;
+    /* Adjusted for readability */
+    font-weight: 600;
+    /* Less bold than standard bold */
+    margin-bottom: 15px;
+    /* Spacing under the title */
 }
 
 .post a {
+    color: #065f46;
+    /* Notion-like color for links */
     text-decoration: none;
-    color: #1a0dab;
-    /* Standard link color */
 }
 
 .post a:hover,
 .post a:focus {
     color: #dd4b39;
-    /* Change color on hover/focus for visual feedback */
+    /* Color change on hover/focus */
     text-decoration: underline;
-    /* Underline on hover/focus for accessibility */
+    /* Underline for accessibility */
 }
 
 .post .info {
-    display: flex;
-    flex-flow: row wrap;
-    /* Wrap for smaller screens */
-    justify-content: space-between;
-    /* Distributes space evenly */
+    font-size: 14px;
+    color: #666;
+    font-style: normal;
+    /* Notion typically uses normal font style for meta info */
     margin-top: 15px;
-    /* Space between title and info */
+    /* Space between content and info */
+    display: flex;
+    justify-content: space-between;
 }
 
 .post .author,
 .post .date {
-    font-size: 14px;
-    /* Standardizes font size */
-    color: #666;
-    /* Muted color for meta info */
-    font-style: italic;
-    /* Style choice */
+    color: #777;
+    /* Slightly lighter color for meta */
 }
 
-.post .date {
-    display: flex;
-    align-items: center;
-    /* Centers date text with icon */
-}
-
-.post .date i {
-    margin-right: 10px;
-    /* Space before date text */
-}
-
-/* Additional: Responsive Media Queries */
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .post {
         max-width: 100%;
-        padding: 20px;
+        padding: 15px;
     }
 
     .post .title {
-        font-size: 24px;
+        font-size: 22px;
     }
 }
