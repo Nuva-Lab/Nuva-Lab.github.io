@@ -5,29 +5,29 @@ layout: compress
 <html lang="en">
 
 <head>
-{% include head.html %}
+    {% include head.html %}
 </head>
 
 <title>{{page.title}}</title>
 
 <body>
-{% include navigation.html %}
+    {% include navigation.html %}
 
-<div id="posts">
-    <div class="post">
-        <div class="title">{{page.title}}</div>
-        <div class="info">
-            <div class="author">By {{page.author}}</div>
-            <div class="date">
-                <i class="fa fa-calendar"></i>
-                {{page.date | date: "%-d %B %Y"}}
+    <div id="posts">
+        <div class="post">
+            <div class="title">{{page.title}}</div>
+            <div class="info">
+                <div class="author">By {{page.author}}</div>
+                <div class="date">
+                    <i class="fa fa-calendar"></i>
+                    {{page.date | date: "%-d %B %Y"}}
+                </div>
             </div>
+            {{ content }}
         </div>
-        {{ content }}
     </div>
-</div>
 
-{% include footer.html %}
+    {% include footer.html %}
 </body>
 
 </html>
