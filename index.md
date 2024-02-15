@@ -9,7 +9,7 @@ layout: default
   Live Out Your  <span class="what-if">What-Ifs</span>
       </div>
       <div class="subtitle w3-text-dark-grey">
-  AI Powered Interactive Storytelling Platform
+  AI Interactive Visual Story Platform
       </div>
     </div>
     <div class="w3-container signup">
