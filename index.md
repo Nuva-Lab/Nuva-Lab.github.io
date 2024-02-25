@@ -15,7 +15,7 @@ layout: default
     <div class="w3-container signup">
       <form id="waitlist-form" action="https://formspree.io/f/mbjvygwp" method="POST">
         <input class="w3-input w3-border" id="email" name="email" type="email" placeholder="Email Address">
-        <button id="my-form-button" class="w3-button w3-black">Follow Us</button>
+        <button id="my-form-button" class="w3-button w3-blue">Follow Us</button>
         <p id="waitlist-form-status"></p>
       </form>
       <div class="signup-text w3-text-dark-grey">
