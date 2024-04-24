@@ -6,10 +6,10 @@ layout: default
   <div>
     <div class="w3-text-dark-gray punchline">
       <div class="title">
-  Live Out Your  <span class="what-if">What-Ifs</span>
+  Bring Your Story to  <span class="what-if">Life</span>
       </div>
       <div class="subtitle w3-text-dark-grey">
-  AI Interactive Visual Story Platform
+  Interactive Visual Story Platform
       </div>
     </div>
     <div class="w3-container signup">
