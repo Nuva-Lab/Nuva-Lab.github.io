@@ -1,5 +1,7 @@
 title: Nuva Lab # Shown in header on pages with full_logo: true
 
+url: "https://nuvalab.ai"
+
 defaults:
   -
     scope:
