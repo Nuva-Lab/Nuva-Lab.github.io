@@ -6,7 +6,7 @@ layout: default
   <div>
     <div class="w3-text-dark-gray punchline">
       <div class="title">
-  Bring Your Story to  <span class="what-if">Life</span>
+        <span class="what-if">Your Story Playground</span>
       </div>
       <div class="subtitle w3-text-dark-grey">
   Interactive Visual Story Platform
