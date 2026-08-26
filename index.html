@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nuva Lab accelerates, customizes, and deploys open-weight video models for production." />
+    <title>Nuva Lab — Video models, production ready</title>
+    <link rel="icon" href="assets/nuvalab.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Mozilla+Headline:wght@400;500;600;700&family=Mozilla+Text:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=10" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Nuva Lab home">
+        <img src="assets/nuvalab.svg" alt="Nuva Lab" />
+      </a>
+      <a class="button button--cyan" href="mailto:info@nuvalab.ai">Contact</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__grid page-grid">
+          <div class="hero__content">
+          <h1 id="hero-title">Video models, <span class="highlight">accelerated</span> and <span class="highlight">customized</span> for your production.</h1>
+          <p class="hero__intro">Post-training, inference optimization, and deployment for the commercial video formats <strong>people actually make.</strong></p>
+
+          <form id="waitlist-form" class="waitlist" action="https://formspree.io/f/mbjvygwp" method="POST">
+            <div class="waitlist__announcement">
+              <div class="waitlist__title">
+                <label for="email">MiniMax H3 with Omni Ref Optimization</label>
+                <span class="status-badge">Pending</span>
+              </div>
+              <p>Coming soon. Join the waitlist for updates and customization for your needs.</p>
+            </div>
+            <div class="waitlist__form">
+              <input id="email" name="email" type="email" placeholder="Work email" autocomplete="email" required />
+              <button type="submit">Join waitlist</button>
+            </div>
+            <p id="waitlist-form-status" class="form-status" aria-live="polite"></p>
+          </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="services frame" aria-labelledby="services-title">
+        <header class="section-heading page-grid">
+          <h2 id="services-title">What We Do</h2>
+          <p>We take open video models from weight to production</p>
+        </header>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <p class="service-card__number">01</p>
+            <h3>Accelerate</h3>
+            <p class="service-card__tags"><span>Post Training</span><span>Model Adaptation</span></p>
+            <p class="service-card__body">Reduce latency and serving costs with model-specific optimization tuned to your target hardware and production workload.</p>
+          </article>
+          <article class="service-card">
+            <p class="service-card__number">02</p>
+            <h3>Customize</h3>
+            <p class="service-card__tags"><span>Post Training</span><span>Model Adaptation</span></p>
+            <p class="service-card__body">Adapt open models to your visual language, formats, and workflows while preserving quality and creative control.</p>
+          </article>
+          <article class="service-card">
+            <p class="service-card__number">03</p>
+            <h3>Deploy</h3>
+            <p class="service-card__tags"><span>Inference</span><span>Production Systems</span></p>
+            <p class="service-card__body">Move from weights to a dependable production service with scalable infrastructure, observability, and hands-on support.</p>
+          </article>
+        </div>
+
+        <div class="open-weights page-grid">
+          <h2>Open Weights</h2>
+          <p>We believe open video models will remain a critical part of the production stack. The Nuva Lab team has contributed to open-source AI for years. We optimize open-weight models for production today and will continue supporting and contributing to the models that come next.</p>
+        </div>
+
+        <section class="wip" aria-labelledby="wip-title">
+          <div class="wip__copy">
+            <div class="wip__heading">
+              <h2 id="wip-title">MiniMax-H3</h2>
+              <p>Current Work</p>
+            </div>
+            <p class="wip__intro">A technical preview of our ongoing MiniMax H3 optimization work.</p>
+            <div class="optimization-list">
+              <article class="optimization-item">
+                <div class="optimization-item__heading">
+                  <h3>Sparsity Kernel</h3>
+                  <div class="status-stack">
+                    <span class="status-badge status-badge--ready">T2V Validated</span>
+                    <span class="status-badge">Omni Ref Pending</span>
+                  </div>
+                </div>
+                <p><strong>90% Sparse</strong><span>≈10× fewer target-video QK/PV block pairs</span></p>
+              </article>
+              <article class="optimization-item">
+                <div class="optimization-item__heading">
+                  <h3>Quantization-Aware Distillation (QAD)</h3>
+                  <div class="status-stack">
+                    <span class="status-badge status-badge--ready">T2V Validated</span>
+                    <span class="status-badge">Omni Ref Pending</span>
+                  </div>
+                </div>
+                <p><strong>12.5× Speedup</strong><span>50 → 4 denoising steps</span></p>
+              </article>
+              <article class="optimization-item">
+                <div class="optimization-item__heading">
+                  <h3>NVFP4 Native</h3>
+                  <span class="status-badge">Pending</span>
+                </div>
+                <p>Weights / Attention / Linear</p>
+              </article>
+            </div>
+          </div>
+          <div class="wip__media">
+            <div class="video-demo">
+              <video src="assets/demo_video_1.mp4" autoplay muted loop playsinline preload="metadata" aria-label="MiniMax H3 optimization demo one"></video>
+              <button class="sound-toggle" type="button" aria-pressed="false">
+                <span class="sound-toggle__icon" aria-hidden="true"></span>
+                <span class="sound-toggle__label">Enable sound</span>
+              </button>
+            </div>
+            <div class="video-demo">
+              <video src="assets/demo_video_2.mp4" autoplay muted loop playsinline preload="metadata" aria-label="MiniMax H3 optimization demo two"></video>
+              <button class="sound-toggle" type="button" aria-pressed="false">
+                <span class="sound-toggle__icon" aria-hidden="true"></span>
+                <span class="sound-toggle__label">Enable sound</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div class="partners page-grid">
+          <div class="partner-group partner-group--lead">
+            <p class="eyebrow">Partner</p>
+            <img class="conviction-logo" src="assets/conviction.png" alt="Conviction" />
+          </div>
+          <div class="partner-group partner-group--collaborators">
+            <p class="eyebrow">Collaborators</p>
+            <div class="logos">
+              <img src="assets/nvidia.svg" alt="NVIDIA" />
+              <img src="assets/vllm.svg" alt="vLLM" />
+              <img src="assets/fastvideo.svg" alt="FastVideo" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta page-grid" aria-labelledby="cta-title">
+        <div>
+          <h2 id="cta-title">Working with an open-weight video model?</h2>
+          <a class="button button--dark" href="mailto:info@nuvalab.ai">Talk to us</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Nuva Lab, Inc.</p>
+      <div class="site-footer__links">
+        <a href="mailto:info@nuvalab.ai">info@nuvalab.ai</a>
+        <a href="privacy-policy.html">Privacy</a>
+      </div>
+    </footer>
+    <script>
+      const waitlistForm = document.getElementById("waitlist-form");
+      const waitlistStatus = document.getElementById("waitlist-form-status");
+
+      waitlistForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const button = waitlistForm.querySelector("button");
+        button.disabled = true;
+        button.textContent = "Joining...";
+        waitlistStatus.textContent = "";
+
+        try {
+          const response = await fetch(waitlistForm.action, {
+            method: waitlistForm.method,
+            body: new FormData(waitlistForm),
+            headers: { Accept: "application/json" }
+          });
+
+          if (!response.ok) {
+            throw new Error("Request failed");
+          }
+
+          waitlistForm.reset();
+          waitlistStatus.textContent = "You're on the list. We'll be in touch.";
+        } catch (error) {
+          waitlistStatus.textContent = "Something went wrong. Email info@nuvalab.ai instead.";
+        } finally {
+          button.disabled = false;
+          button.textContent = "Join waitlist";
+        }
+      });
+
+      const demos = [...document.querySelectorAll(".video-demo")];
+
+      demos.forEach((demo) => {
+        const video = demo.querySelector("video");
+        const button = demo.querySelector(".sound-toggle");
+        const label = demo.querySelector(".sound-toggle__label");
+
+        button.addEventListener("click", async () => {
+          const enableSound = video.muted;
+
+          demos.forEach((otherDemo) => {
+            const otherVideo = otherDemo.querySelector("video");
+            const otherButton = otherDemo.querySelector(".sound-toggle");
+            const otherLabel = otherDemo.querySelector(".sound-toggle__label");
+
+            otherVideo.muted = true;
+            otherButton.setAttribute("aria-pressed", "false");
+            otherLabel.textContent = "Enable sound";
+
+            if (otherDemo !== demo && enableSound) {
+              otherVideo.pause();
+            }
+          });
+
+          if (enableSound) {
+            video.currentTime = 0;
+            video.muted = false;
+            button.setAttribute("aria-pressed", "true");
+            label.textContent = "Mute";
+            await video.play();
+          } else {
+            video.muted = true;
+            await video.play();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
