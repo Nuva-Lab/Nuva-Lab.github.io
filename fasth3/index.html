@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FastH3 production guide: open-weight MiniMax H3 acceleration, FastVideo integration, local inference, API endpoints, benchmarks, and private deployment." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://nuvalab.ai/fasth3/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Nuva Lab" />
+    <meta property="og:title" content="FastH3 for Production Video Generation | Nuva Lab" />
+    <meta property="og:description" content="FastH3 architecture, public benchmarks, local deployment, API endpoint options, and production integration with FastVideo." />
+    <meta property="og:url" content="https://nuvalab.ai/fasth3/" />
+    <meta name="twitter:card" content="summary" />
+    <title>FastH3: MiniMax H3 Optimization, API &amp; Deployment | Nuva Lab</title>
+    <link rel="icon" href="/assets/nuvalab.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Mozilla+Headline:wght@400;500;600;700&family=Mozilla+Text:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/product-pages.css?v=1" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-69HFVL1CS6"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-69HFVL1CS6");</script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "TechArticle",
+            "headline": "FastH3 for Production Video Generation",
+            "description": "FastH3 architecture, public benchmarks, local deployment, API endpoint options, and production integration.",
+            "datePublished": "2026-09-02",
+            "dateModified": "2026-09-02",
+            "author": {"@type":"Organization","name":"Nuva Lab","url":"https://nuvalab.ai/"},
+            "publisher": {"@type":"Organization","name":"Nuva Lab","url":"https://nuvalab.ai/"},
+            "mainEntityOfPage": "https://nuvalab.ai/fasth3/"
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {"@type":"Question","name":"What is FastH3?","acceptedAnswer":{"@type":"Answer","text":"FastH3 is FastVideo's few-step, sparse-distilled derivative of MiniMax H3 for synchronized video-and-audio generation. The recommended Preview v1 profile uses four transformer calls and Video Sparse Attention."}},
+              {"@type":"Question","name":"Can FastH3 run locally?","acceptedAnswer":{"@type":"Answer","text":"Yes. FastVideo has published FastH3 paths for NVIDIA DGX Spark and Apple Silicon, in addition to data-center NVIDIA GPUs. Hardware choice changes latency, memory strategy, and output throughput."}},
+              {"@type":"Question","name":"Is FastH3 open source?","acceptedAnswer":{"@type":"Answer","text":"FastVideo's framework is Apache-2.0 open source. FastH3 uses MiniMax H3 weights and derivatives governed by the MiniMax H3 Community License, so the model weights should be described as open weight rather than Apache-2.0."}},
+              {"@type":"Question","name":"Can Nuva Lab provide a FastH3 API endpoint?","acceptedAnswer":{"@type":"Answer","text":"Nuva Lab can evaluate dedicated endpoint, private deployment, and model optimization projects subject to model authorization, territory, workload, hardware, and quality requirements."}}
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="/" aria-label="Nuva Lab home"><img src="/assets/nuvalab.svg" alt="Nuva Lab" /></a>
+      <nav class="page-nav" aria-label="Main navigation">
+        <a href="/fastvideo/">FastVideo</a><a href="/minimax-h3/">MiniMax H3</a><a href="/video-model-deployment/">Deployment</a><a class="button" href="mailto:info@nuvalab.ai?subject=FastH3%20production%20inquiry">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__inner">
+          <div>
+            <p class="eyebrow">FastVideo × Nuva Lab</p>
+            <h1>FastH3 for production video generation</h1>
+            <p class="hero__lead">FastH3 turns MiniMax H3 into a few-step, production-oriented video-and-audio generation path. Nuva Lab works on the layer after the public checkpoint: workload evaluation, model adaptation, inference optimization, dedicated endpoints, and private deployment.</p>
+            <div class="hero__actions">
+              <a class="button button--dark" href="mailto:info@nuvalab.ai?subject=FastH3%20endpoint%20or%20deployment">Discuss a FastH3 deployment</a>
+              <a class="button" href="https://haoailab.com/blogs/fasth3-preview/" target="_blank" rel="noopener noreferrer">Read the joint release</a>
+            </div>
+          </div>
+          <aside class="hero__aside" aria-label="FastH3 release facts">
+            <div class="fact"><span>Generation path</span><strong>4 DiT calls</strong></div>
+            <div class="fact"><span>Video attention</span><strong>90% sparse profile</strong></div>
+            <div class="fact"><span>Public 15s receipt</span><strong>&lt;13s on 8× B200</strong></div>
+            <div class="fact"><span>Framework</span><strong>FastVideo</strong></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section--split">
+        <div><p class="eyebrow">Why FastH3</p><h2>From a research checkpoint to a usable production system</h2></div>
+        <div class="prose">
+          <p>Base video models are rarely production systems by themselves. Teams still need a repeatable inference graph, hardware-specific kernels, memory planning, request orchestration, output encoding, quality gates, and a way to measure the cost of an accepted clip rather than the cost of a single attempt.</p>
+          <p>FastH3 reduces the denoising path from the original H3 schedule to four transformer calls. The recommended Preview v1 profile also applies Video Sparse Attention to eligible video-to-video attention tiles. That creates a much stronger starting point for high-volume workflows, but real deployment still depends on output quality, retries, VAE and media-processing time, topology, and target hardware.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Deployment options</p>
+        <h2>FastH3 API, local inference, or a private endpoint?</h2>
+        <div class="feature-list">
+          <article class="feature"><p class="feature__number">01</p><h3>Dedicated API endpoint</h3><p>A managed endpoint for applications that need predictable capacity, observability, request controls, and a stable integration surface.</p></article>
+          <article class="feature"><p class="feature__number">02</p><h3>Private GPU deployment</h3><p>A deployment on dedicated or customer-controlled hardware for private references, internal workflows, and high sustained utilization.</p></article>
+          <article class="feature"><p class="feature__number">03</p><h3>Local FastH3 evaluation</h3><p>Hardware and quality qualification across data-center NVIDIA GPUs, DGX Spark, and supported Apple Silicon paths before committing to a topology.</p></article>
+          <article class="feature"><p class="feature__number">04</p><h3>Custom production profile</h3><p>A frozen workload, reference policy, acceptance evaluation, checkpoint or adapter, runtime configuration, endpoint, and rollback path.</p></article>
+        </div>
+      </section>
+
+      <section class="section proof">
+        <div class="proof__media"><video data-src="/assets/demo_video_1.mp4" poster="/assets/demo_video_1-poster.jpg" muted loop playsinline preload="none" aria-label="MiniMax H3 video and audio generation sample"></video></div>
+        <div class="proof__copy">
+          <p class="eyebrow">Public evidence</p>
+          <h2>What the FastH3 release proves</h2>
+          <ul>
+            <li>FastH3 Preview v1 is an open-weight four-step T2VA release built on MiniMax H3.</li>
+            <li>The published 15-second, 768p result is faster than playback on eight NVIDIA B200 GPUs.</li>
+            <li>The release supports variable duration, resolution, and aspect ratio in one checkpoint.</li>
+            <li>FastVideo subsequently published local paths for NVIDIA DGX Spark and Apple Silicon.</li>
+          </ul>
+          <p class="callout"><strong>Production boundary</strong>Public release benchmarks are not a customer SLA. Nuva Lab qualifies matched prompts, quality acceptance, retries, P50/P95 latency, complete media output, and actual hardware economics before recommending a deployment.</p>
+        </div>
+      </section>
+
+      <section class="section section--split">
+        <div><p class="eyebrow">Licensing</p><h2>Open framework and open weights are not the same license</h2></div>
+        <div class="prose">
+          <p><strong>FastVideo is Apache-2.0 open source.</strong> MiniMax H3 and FastH3 model weights and derivatives are governed by the MiniMax H3 Community License. That license currently excludes the United States, European Union, United Kingdom, and Republic of Korea from its default applicable territory and directs interested deployers in excluded territories to seek authorization from MiniMax.</p>
+          <p>Nuva Lab scopes any H3 or FastH3 commercial deployment subject to written model authorization, territory, customer use case, and applicable compliance requirements. We can also evaluate model-portable private systems using other appropriately licensed open-weight video models.</p>
+        </div>
+      </section>
+
+      <section class="section faq">
+        <p class="eyebrow">FastH3 FAQ</p>
+        <h2>Questions teams ask before deployment</h2>
+        <details><summary>What is FastH3?</summary><p>FastH3 is FastVideo's few-step, sparse-distilled derivative of MiniMax H3 for synchronized video-and-audio generation. The recommended Preview v1 profile uses four transformer calls and Video Sparse Attention.</p></details>
+        <details><summary>Can FastH3 run locally?</summary><p>Yes. FastVideo has published FastH3 paths for NVIDIA DGX Spark and Apple Silicon, in addition to data-center NVIDIA GPUs. Local does not necessarily mean real-time; latency and memory strategy vary materially by hardware.</p></details>
+        <details><summary>Is FastH3 open source?</summary><p>The FastVideo framework is Apache-2.0 open source. FastH3 uses MiniMax H3 weights and derivatives under the MiniMax H3 Community License, so “open weight” is the accurate model description.</p></details>
+        <details><summary>Can Nuva Lab provide a FastH3 API endpoint?</summary><p>We can evaluate dedicated endpoint and private deployment projects subject to model authorization, territory, workload volume, target quality, and hardware requirements.</p></details>
+      </section>
+
+      <section class="section section--split">
+        <div><p class="eyebrow">Sources</p><h2>Technical releases and integrations</h2></div>
+        <div class="link-list">
+          <a href="https://haoailab.com/blogs/fasth3-preview/" target="_blank" rel="noopener noreferrer"><span>FastH3 Preview v1 joint release</span><span>↗</span></a>
+          <a href="https://haoailab.com/blogs/fasth3-local/" target="_blank" rel="noopener noreferrer"><span>FastH3 on DGX Spark and Apple Silicon</span><span>↗</span></a>
+          <a href="https://vllm.ai/blog/2026-09-01-minimax-h3-production-serving" target="_blank" rel="noopener noreferrer"><span>MiniMax H3 and FastH3 on vLLM-Omni</span><span>↗</span></a>
+          <a href="/fastvideo/"><span>Nuva Lab's FastVideo integration</span><span>→</span></a>
+          <a href="/video-inference-optimization/"><span>End-to-end video inference optimization</span><span>→</span></a>
+          <a href="/video-model-customization/"><span>Custom video model post-training</span><span>→</span></a>
+        </div>
+      </section>
+
+      <section class="conversion"><div><h2>Evaluating FastH3 for a real workload?</h2><p>Bring your target format, monthly volume, current API spend, acceptance rate, and deployment constraints. We will qualify the model and system against the workload that matters.</p><a class="button button--dark" href="mailto:info@nuvalab.ai?subject=FastH3%20production%20evaluation">Start a production evaluation</a></div></section>
+    </main>
+
+    <footer class="page-footer"><p>© 2026 Nuva Lab, Inc.</p><div><a href="/">Home</a><a href="/privacy-policy.html">Privacy</a><a href="mailto:info@nuvalab.ai">Contact</a></div></footer>
+    <script src="/site.js" defer></script>
+  </body>
+</html>

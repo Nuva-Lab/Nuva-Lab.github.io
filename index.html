@@ -3,20 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Nuva Lab accelerates, customizes, and deploys open-weight video models for production." />
-    <title>Nuva Lab — Video models, production ready</title>
+    <meta name="description" content="Nuva Lab accelerates, customizes, and deploys open-weight video models for production, including MiniMax H3 and FastH3 with FastVideo." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://nuvalab.ai/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Nuva Lab" />
+    <meta property="og:title" content="Nuva Lab | Open-Weight Video Model Optimization & Deployment" />
+    <meta property="og:description" content="Post-training, inference optimization, customization, and private deployment for production video models." />
+    <meta property="og:url" content="https://nuvalab.ai/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Nuva Lab | Open-Weight Video Model Optimization & Deployment" />
+    <meta name="twitter:description" content="Post-training, inference optimization, customization, and private deployment for production video models." />
+    <title>Nuva Lab | Open-Weight Video Model Optimization &amp; Deployment</title>
     <link rel="icon" href="assets/nuvalab.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Mozilla+Headline:wght@400;500;600;700&family=Mozilla+Text:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=11" />
+    <link rel="stylesheet" href="styles.css?v=12" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-69HFVL1CS6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "G-69HFVL1CS6");
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://nuvalab.ai/#organization",
+            "name": "Nuva Lab",
+            "url": "https://nuvalab.ai/",
+            "logo": "https://nuvalab.ai/assets/nuvalab.svg",
+            "description": "Nuva Lab accelerates, customizes, and deploys open-weight video models for production."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://nuvalab.ai/#website",
+            "url": "https://nuvalab.ai/",
+            "name": "Nuva Lab",
+            "publisher": { "@id": "https://nuvalab.ai/#organization" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Nuva Lab home">
         <img src="assets/nuvalab.svg" alt="Nuva Lab" />
       </a>
-      <a class="button button--cyan" href="mailto:info@nuvalab.ai">Contact</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/fasth3/">FastH3</a>
+        <a href="/fastvideo/">FastVideo</a>
+        <a href="/video-model-deployment/">Deployment</a>
+        <a class="button button--cyan" href="mailto:info@nuvalab.ai">Contact</a>
+      </nav>
     </header>
 
     <main id="top">
@@ -56,18 +100,21 @@
             <h3>Accelerate</h3>
             <p class="service-card__tags"><span>Post Training</span><span>Model Adaptation</span></p>
             <p class="service-card__body">Reduce latency and serving costs with model-specific optimization tuned to your target hardware and production workload.</p>
+            <a class="service-card__link" href="/video-inference-optimization/">Inference optimization <span aria-hidden="true">→</span></a>
           </article>
           <article class="service-card">
             <p class="service-card__number">02</p>
             <h3>Customize</h3>
             <p class="service-card__tags"><span>Post Training</span><span>Model Adaptation</span></p>
             <p class="service-card__body">Adapt open models to your visual language, formats, and workflows while preserving quality and creative control.</p>
+            <a class="service-card__link" href="/video-model-customization/">Model customization <span aria-hidden="true">→</span></a>
           </article>
           <article class="service-card">
             <p class="service-card__number">03</p>
             <h3>Deploy</h3>
             <p class="service-card__tags"><span>Inference</span><span>Production Systems</span></p>
             <p class="service-card__body">Move from weights to a dependable production service with scalable infrastructure, observability, and hands-on support.</p>
+            <a class="service-card__link" href="/video-model-deployment/">Private deployment <span aria-hidden="true">→</span></a>
           </article>
         </div>
 
@@ -79,7 +126,7 @@
         <section class="wip" aria-labelledby="wip-title">
           <div class="wip__copy">
             <div class="wip__heading">
-              <h2 id="wip-title">MiniMax-H3</h2>
+              <h2 id="wip-title"><a href="/minimax-h3/">MiniMax-H3</a></h2>
               <p>Current Work</p>
             </div>
             <p class="wip__intro">A technical preview of our ongoing MiniMax H3 optimization work.</p>
@@ -115,18 +162,34 @@
           </div>
           <div class="wip__media">
             <div class="video-demo">
-              <video src="assets/demo_video_1.mp4" autoplay muted loop playsinline preload="metadata" aria-label="MiniMax H3 optimization demo one"></video>
+              <video data-src="assets/demo_video_1.mp4" poster="assets/demo_video_1-poster.jpg" muted loop playsinline preload="none" aria-label="MiniMax H3 optimization demo one"></video>
               <button class="sound-toggle" type="button" aria-pressed="false">
                 <span class="sound-toggle__icon" aria-hidden="true"></span>
                 <span class="sound-toggle__label">Enable sound</span>
               </button>
             </div>
             <div class="video-demo">
-              <video src="assets/demo_video_2.mp4" autoplay muted loop playsinline preload="metadata" aria-label="MiniMax H3 optimization demo two"></video>
+              <video data-src="assets/demo_video_2.mp4" poster="assets/demo_video_2-poster.jpg" muted loop playsinline preload="none" aria-label="MiniMax H3 optimization demo two"></video>
               <button class="sound-toggle" type="button" aria-pressed="false">
                 <span class="sound-toggle__icon" aria-hidden="true"></span>
                 <span class="sound-toggle__label">Enable sound</span>
               </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="industry-deployment page-grid" aria-labelledby="industry-deployment-title">
+          <div class="industry-deployment__heading">
+            <p class="eyebrow">Private Deployment</p>
+            <h2 id="industry-deployment-title">Dedicated video model systems for high-volume production teams</h2>
+          </div>
+          <div class="industry-deployment__body">
+            <p>We are preparing complete, dedicated deployments for studios, advertising teams, and short-form drama companies that need predictable throughput, private assets, and model behavior tuned to their production formats.</p>
+            <div class="industry-deployment__links">
+              <a href="/solutions/studios/">For studios <span aria-hidden="true">→</span></a>
+              <a href="/solutions/advertising/">For advertising teams <span aria-hidden="true">→</span></a>
+              <a href="/solutions/short-drama/">For short-drama companies <span aria-hidden="true">→</span></a>
+              <a href="/video-model-deployment/">Explore the system <span aria-hidden="true">→</span></a>
             </div>
           </div>
         </section>
@@ -193,8 +256,8 @@
             <p class="eyebrow">Collaborators</p>
             <div class="logos">
               <img src="assets/nvidia.svg" alt="NVIDIA" />
-              <img src="assets/vllm.svg" alt="vLLM" />
-              <img src="assets/fastvideo.svg" alt="FastVideo" />
+              <a href="https://vllm.ai/blog/2026-09-01-minimax-h3-production-serving" target="_blank" rel="noopener noreferrer" aria-label="Read the vLLM-Omni MiniMax H3 integration"><img src="assets/vllm.svg" alt="vLLM" /></a>
+              <a href="/fastvideo/" aria-label="Learn about Nuva Lab and FastVideo"><img src="assets/fastvideo.svg" alt="FastVideo" /></a>
             </div>
           </div>
         </div>
@@ -239,6 +302,12 @@
 
           waitlistForm.reset();
           waitlistStatus.textContent = "You're on the list. We'll be in touch.";
+          if (typeof gtag === "function") {
+            gtag("event", "generate_lead", {
+              form_name: "h3_optimization_waitlist",
+              page_location: window.location.href
+            });
+          }
         } catch (error) {
           waitlistStatus.textContent = "Something went wrong. Email info@nuvalab.ai instead.";
         } finally {
@@ -249,12 +318,31 @@
 
       const demos = [...document.querySelectorAll(".video-demo")];
 
+      const loadDemo = (video) => {
+        if (video.src || !video.dataset.src) return;
+        video.src = video.dataset.src;
+        video.load();
+      };
+
+      const demoObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const video = entry.target.querySelector("video");
+          loadDemo(video);
+          video.play().catch(() => {});
+          demoObserver.unobserve(entry.target);
+        });
+      }, { rootMargin: "300px 0px" });
+
       demos.forEach((demo) => {
         const video = demo.querySelector("video");
         const button = demo.querySelector(".sound-toggle");
         const label = demo.querySelector(".sound-toggle__label");
 
+        demoObserver.observe(demo);
+
         button.addEventListener("click", async () => {
+          loadDemo(video);
           const enableSound = video.muted;
 
           demos.forEach((otherDemo) => {
@@ -284,5 +372,6 @@
         });
       });
     </script>
+    <script src="/site.js" defer></script>
   </body>
 </html>
