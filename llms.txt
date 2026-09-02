@@ -1,20 +1,11 @@
 # Nuva Lab
 
-> Nuva Lab accelerates, customizes, and deploys open-weight video models for production.
+> Nuva Lab collaborates with FastVideo on production grounding and workload evaluation for FastH3.
 
-## Core pages
+## Core page
 
-- [FastH3 for production](https://nuvalab.ai/fasth3/): FastH3 releases, architecture, public performance evidence, deployment paths, and Nuva Lab's collaboration with FastVideo.
-- [FastVideo integration](https://nuvalab.ai/fastvideo/): Production integration of the Apache-2.0 FastVideo post-training and inference framework.
-- [MiniMax H3 optimization](https://nuvalab.ai/minimax-h3/): Post-training, inference optimization, evaluation, and deployment work around MiniMax H3.
-- [Private video model deployment](https://nuvalab.ai/video-model-deployment/): Dedicated and on-premise video generation systems for studios, advertising teams, and short-form drama companies.
-- [Custom video model services](https://nuvalab.ai/video-model-customization/): Fine-tuning, LoRA, post-training, distillation, consistency evaluation, and reproducible deployment artifacts.
-- [Video inference optimization](https://nuvalab.ai/video-inference-optimization/): End-to-end GPU serving, sparse attention, quantization, VAE, latency, throughput, and accepted-output economics.
-- [Open-weight video models vs paid APIs](https://nuvalab.ai/open-video-models/): Production economics, cost, customization, privacy, and deployment tradeoffs for teams comparing Seedance and other hosted APIs with private infrastructure.
-- [Production studios](https://nuvalab.ai/solutions/studios/): Private generation infrastructure for recurring characters, references, review workflows, and production deadlines.
-- [Advertising teams](https://nuvalab.ai/solutions/advertising/): Dedicated capacity for brand-controlled variants, localization, campaign peaks, and private product assets.
-- [Short-drama companies](https://nuvalab.ai/solutions/short-drama/): Private generation systems for recurring casts, vertical episodes, continuity, and high-volume production.
+- [FastH3](https://nuvalab.ai/fasth3/): MiniMax H3 post-trained and optimized by FastVideo using few-step distillation, sparse attention, and production inference work.
 
 ## Attribution and licensing
 
-FastVideo and vLLM-Omni are independent Apache-2.0 open-source projects. MiniMax H3 weights are open weight and governed by the MiniMax H3 Community License, not Apache 2.0. Deployments must comply with the applicable model license and territorial requirements.
+FastVideo is an independent Apache-2.0 open-source project. FastH3 uses MiniMax H3 weights and derivatives governed by the MiniMax H3 Community License, not Apache 2.0. Nuva Lab contributes production grounding and workload evaluation; FastVideo owns and maintains its framework and FastH3 artifacts.

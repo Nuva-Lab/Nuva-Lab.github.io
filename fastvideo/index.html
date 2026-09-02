@@ -3,117 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="FastVideo integration for production: post-training, inference optimization, FastH3, dedicated endpoints, and private video model deployment with Nuva Lab." />
-    <meta name="robots" content="index,follow,max-image-preview:large" />
-    <link rel="canonical" href="https://nuvalab.ai/fastvideo/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Nuva Lab" />
-    <meta property="og:title" content="FastVideo Production Integration | Nuva Lab" />
-    <meta property="og:description" content="Turn FastVideo's open-source post-training and inference framework into a production video generation system." />
-    <meta property="og:url" content="https://nuvalab.ai/fastvideo/" />
-    <meta name="twitter:card" content="summary" />
-    <title>FastVideo Integration, Optimization &amp; Deployment | Nuva Lab</title>
-    <link rel="icon" href="/assets/nuvalab.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Mozilla+Headline:wght@400;500;600;700&family=Mozilla+Text:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/product-pages.css?v=1" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-69HFVL1CS6"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-69HFVL1CS6");</script>
-    <script type="application/ld+json">
-      {
-        "@context":"https://schema.org",
-        "@type":"Service",
-        "name":"FastVideo Production Integration",
-        "serviceType":"Open-source video model post-training, inference optimization, and deployment",
-        "provider":{"@type":"Organization","name":"Nuva Lab","url":"https://nuvalab.ai/"},
-        "url":"https://nuvalab.ai/fastvideo/",
-        "description":"Production integration services for FastVideo, including workload evaluation, model adaptation, inference optimization, dedicated endpoints, and private deployment."
-      }
-    </script>
+    <meta name="robots" content="noindex,follow" />
+    <link rel="canonical" href="https://nuvalab.ai/fasth3/" />
+    <meta http-equiv="refresh" content="0; url=/fasth3/" />
+    <title>FastH3 | Nuva Lab</title>
   </head>
   <body>
-    <header class="page-header">
-      <a href="/" aria-label="Nuva Lab home"><img src="/assets/nuvalab.svg" alt="Nuva Lab" /></a>
-      <nav class="page-nav" aria-label="Main navigation">
-        <a href="/fasth3/">FastH3</a><a href="/minimax-h3/">MiniMax H3</a><a href="/video-model-deployment/">Deployment</a><a class="button" href="mailto:info@nuvalab.ai?subject=FastVideo%20integration">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="hero__inner">
-          <div>
-            <p class="eyebrow">Apache-2.0 Open Source</p>
-            <h1>FastVideo integration for production video models</h1>
-            <p class="hero__lead">FastVideo is a unified post-training and real-time inference framework for accelerated video generation. Nuva Lab integrates it with production workloads, quality evaluation, target hardware, private infrastructure, and customer-facing endpoints.</p>
-            <div class="hero__actions"><a class="button button--dark" href="mailto:info@nuvalab.ai?subject=FastVideo%20production%20integration">Discuss an integration</a><a class="button" href="https://github.com/hao-ai-lab/FastVideo" target="_blank" rel="noopener noreferrer">View FastVideo on GitHub</a></div>
-          </div>
-          <aside class="hero__aside">
-            <div class="fact"><span>Framework license</span><strong>Apache 2.0</strong></div>
-            <div class="fact"><span>Core scope</span><strong>Post-training + inference</strong></div>
-            <div class="fact"><span>H3 release</span><strong>FastH3</strong></div>
-            <div class="fact"><span>Nuva focus</span><strong>Production workloads</strong></div>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section section--split">
-        <div><p class="eyebrow">Deep integration</p><h2>Open-source infrastructure, production-specific system</h2></div>
-        <div class="prose">
-          <p>Nuva Lab does not rebrand FastVideo as proprietary software. FastVideo remains an independent Apache-2.0 project and our primary open-source technical framework and collaborator for H3 post-training and optimization.</p>
-          <p>Our layer begins with the customer workload: target video format, reference behavior, prompt distribution, quality acceptance, regeneration patterns, latency goal, privacy constraints, and hardware economics. We turn those requirements into an evaluation set, model configuration, deployment topology, and operating endpoint.</p>
-        </div>
-      </section>
-
-      <section class="section">
-        <p class="eyebrow">What Nuva adds</p>
-        <h2>The production work around the framework</h2>
-        <div class="feature-list">
-          <article class="feature"><p class="feature__number">01</p><h3>Workload evaluation</h3><p>Frozen prompts, references, output requirements, and acceptance criteria based on the customer's actual production process.</p></article>
-          <article class="feature"><p class="feature__number">02</p><h3>Post-training and adaptation</h3><p>Model-specific distillation, sparse training, adapters, conditioning policies, and quality recovery where the workload supports them.</p></article>
-          <article class="feature"><p class="feature__number">03</p><h3>Inference optimization</h3><p>Attention kernels, compilation, parallelism, memory planning, VAE and media pipeline optimization, and hardware qualification.</p></article>
-          <article class="feature"><p class="feature__number">04</p><h3>Deployment and operations</h3><p>Dedicated endpoints or private systems with observability, admission control, reproducible releases, capacity planning, and rollback.</p></article>
-        </div>
-      </section>
-
-      <section class="section section--split">
-        <div><p class="eyebrow">Why teams search for FastVideo</p><h2>When a public API stops fitting the workload</h2></div>
-        <div class="prose">
-          <p>Closed video APIs are useful for early experimentation. At sustained volume, studios and advertising teams often run into a different set of questions: cost per accepted second, queue and rate limits, reference privacy, reproducibility, custom formats, model updates, and the ability to reserve capacity for a deadline.</p>
-          <p>FastVideo provides the open framework for model acceleration and serving. A production engagement adds the model rights, data and evaluation contract, hardware, deployment controls, and operational ownership needed to use that framework responsibly.</p>
-        </div>
-      </section>
-
-      <section class="section">
-        <p class="eyebrow">Integration map</p>
-        <h2>FastVideo in the production stack</h2>
-        <table class="comparison">
-          <thead><tr><th>Layer</th><th>Primary role</th><th>Production question</th></tr></thead>
-          <tbody>
-            <tr><td>Model supply</td><td>Open-weight or licensed video model</td><td>Are the weights authorized for the territory and commercial use?</td></tr>
-            <tr><td>FastVideo</td><td>Post-training and accelerated inference framework</td><td>Which model graph, kernels, precision, and parallelism are qualified?</td></tr>
-            <tr><td>Nuva production profile</td><td>Workload, evaluation, adaptation, runtime policy, and deployment</td><td>Does the system improve accepted output, throughput, privacy, or total cost?</td></tr>
-            <tr><td>Customer workflow</td><td>Studio, advertising, short drama, or creative application</td><td>Can operators reliably produce the required format at deadline?</td></tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="section section--split">
-        <div><p class="eyebrow">Related work</p><h2>FastVideo, FastH3, and production serving</h2></div>
-        <div class="link-list">
-          <a href="/fasth3/"><span>FastH3 production guide</span><span>→</span></a>
-          <a href="/minimax-h3/"><span>MiniMax H3 optimization and customization</span><span>→</span></a>
-          <a href="/video-inference-optimization/"><span>Video inference optimization and GPU serving</span><span>→</span></a>
-          <a href="/video-model-customization/"><span>Video model fine-tuning and post-training</span><span>→</span></a>
-          <a href="https://haoailab.com/blogs/fasth3-preview/" target="_blank" rel="noopener noreferrer"><span>FastH3 Preview v1 release</span><span>↗</span></a>
-          <a href="https://vllm.ai/blog/2026-09-01-minimax-h3-production-serving" target="_blank" rel="noopener noreferrer"><span>vLLM-Omni production serving integration</span><span>↗</span></a>
-        </div>
-      </section>
-
-      <section class="conversion"><div><h2>Building on FastVideo?</h2><p>We work with high-volume teams that need a model and system fitted to their own formats, quality bar, infrastructure, and commercial constraints.</p><a class="button button--dark" href="mailto:info@nuvalab.ai?subject=FastVideo%20production%20project">Talk to Nuva Lab</a></div></section>
-    </main>
-    <footer class="page-footer"><p>© 2026 Nuva Lab, Inc.</p><div><a href="/">Home</a><a href="/privacy-policy.html">Privacy</a><a href="mailto:info@nuvalab.ai">Contact</a></div></footer>
-    <script src="/site.js" defer></script>
+    <p>FastVideo's MiniMax H3 post-training and optimization work is FastH3. Continue to <a href="/fasth3/">FastH3</a>.</p>
   </body>
 </html>

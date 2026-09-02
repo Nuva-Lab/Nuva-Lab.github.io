@@ -57,9 +57,7 @@ if (header) {
     </summary>
     <nav aria-label="Mobile navigation">
       <a href="/fasth3/">FastH3</a>
-      <a href="/fastvideo/">FastVideo</a>
-      <a href="/minimax-h3/">MiniMax H3</a>
-      <a href="/video-model-deployment/">Deployment</a>
+      <a href="/blog.html">Blog</a>
       <a href="mailto:info@nuvalab.ai">Contact</a>
     </nav>
   `;
