@@ -1,8 +1,11 @@
 ---
 layout: default
+title: "Nuva Lab Blog"
+description: "Technical notes and founder writing from Nuva Lab on AI infrastructure, open-source systems, and production video models."
 ---
 
 <div id="posts">
+<h1 class="sr-only">Nuva Lab Blog</h1>
 
 {% for post in site.posts %}   
     {% unless post.listed == false %}
