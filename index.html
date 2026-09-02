@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Mozilla+Headline:wght@400;500;600;700&family=Mozilla+Text:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=10" />
+    <link rel="stylesheet" href="styles.css?v=11" />
   </head>
   <body>
     <header class="site-header">
@@ -128,6 +128,59 @@
                 <span class="sound-toggle__label">Enable sound</span>
               </button>
             </div>
+          </div>
+        </section>
+
+        <section class="release-feed" aria-labelledby="release-feed-title">
+          <header class="release-feed__heading page-grid">
+            <div>
+              <h2 id="release-feed-title">Releases &amp; News</h2>
+            </div>
+            <p>Open model work, production integrations, and ecosystem releases from Nuva Lab and our collaborators.</p>
+          </header>
+
+          <div class="release-list">
+            <a class="release-item" href="https://haoailab.com/blogs/fasth3-local/" target="_blank" rel="noopener noreferrer">
+              <div class="release-item__meta">
+                <time datetime="2026-09-02">Sep 02, 2026</time>
+                <span>Ecosystem Update</span>
+              </div>
+              <div class="release-item__content">
+                <div class="release-item__title">
+                  <h3>FastH3 Goes Local</h3>
+                  <span class="release-item__latest">Latest</span>
+                </div>
+                <p>The FastVideo ecosystem brings FastH3 to NVIDIA DGX Spark and Apple Silicon for local video generation.</p>
+              </div>
+              <span class="release-item__source">FastVideo</span>
+              <span class="release-item__arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="release-item" href="https://vllm.ai/blog/2026-09-01-minimax-h3-production-serving" target="_blank" rel="noopener noreferrer">
+              <div class="release-item__meta">
+                <time datetime="2026-09-01">Sep 01, 2026</time>
+                <span>Integration</span>
+              </div>
+              <div class="release-item__content">
+                <h3>MiniMax H3 on vLLM-Omni</h3>
+                <p>vLLM-Omni details the complete MiniMax H3 serving stack and its integration with FastVideo's four-step FastH3.</p>
+              </div>
+              <span class="release-item__source">vLLM</span>
+              <span class="release-item__arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="release-item" href="https://haoailab.com/blogs/fasth3-preview/" target="_blank" rel="noopener noreferrer">
+              <div class="release-item__meta">
+                <time datetime="2026-08-27">Aug 27, 2026</time>
+                <span>Joint Release</span>
+              </div>
+              <div class="release-item__content">
+                <h3>FastH3 Preview v1</h3>
+                <p>Open-weight, four-step sparse-distilled MiniMax H3, developed with FastVideo and NVIDIA collaborators and grounded in production workloads with Nuva Lab.</p>
+              </div>
+              <span class="release-item__source">FastVideo</span>
+              <span class="release-item__arrow" aria-hidden="true">↗</span>
+            </a>
           </div>
         </section>
 
