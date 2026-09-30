@@ -4,15 +4,44 @@
   "main": "worker.mjs",
   "account_id": "fe1b76b8c2085cc4b81100fb9688f1de",
   "compatibility_date": "2026-09-30",
-  "workers_dev": true,
-  "send_email": [{
-    "name": "EMAIL",
-    "destination_address": "info@nuvalab.ai",
-    "allowed_sender_addresses": ["website@notify.nuvalab.ai"]
-  }],
+  "workers_dev": false,
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "destination_address": "info@nuvalab.ai",
+      "allowed_sender_addresses": [
+        "website@notify.nuvalab.ai"
+      ]
+    }
+  ],
   "durable_objects": {
-    "bindings": [{ "name": "LIMITS", "class_name": "LeadLimit" }]
+    "bindings": [
+      {
+        "name": "LIMITS",
+        "class_name": "LeadLimit"
+      }
+    ]
   },
-  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["LeadLimit"] }],
-  "observability": { "enabled": true, "head_sampling_rate": 1 }
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "LeadLimit"
+      ]
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "routes": [
+    {
+      "pattern": "nuvalab.ai/api/leads",
+      "zone_id": "f83ae0e763dcfe7df4a34ff80af41a09"
+    },
+    {
+      "pattern": "www.nuvalab.ai/api/leads",
+      "zone_id": "f83ae0e763dcfe7df4a34ff80af41a09"
+    }
+  ]
 }
