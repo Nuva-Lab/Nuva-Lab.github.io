@@ -63,7 +63,7 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a href="/fasth3/">FastH3</a>
         <a href="mailto:info@nuvalab.ai">Contact</a>
-        <a class="button button--cyan" href="mailto:info@nuvalab.ai?subject=FastH3%20for%20my%20business">Get in touch</a>
+        <a class="button button--cyan" href="#survey" data-survey-open>Get access</a>
       </nav>
     </header>
 
@@ -94,7 +94,7 @@
               <p class="waitlist__followup">Or feeling ambitious for real-time generation?</p>
             </div>
             <div class="waitlist__cta">
-              <a class="button button--dark" href="mailto:info@nuvalab.ai?subject=FastH3%20for%20my%20business">Get in touch <span aria-hidden="true">→</span></a>
+              <button class="button button--dark" type="button" data-survey-open>Get started · 1 min <span aria-hidden="true">→</span></button>
             </div>
             <p class="waitlist__fineprint">Illustrative GPU cost at full utilization: 8× RTX PRO 6000 × $3/hour/GPU; 10-second 768p videos with audio. Excludes service fees. API comparison: H3 768P $0.08/s; Seedance 2.0 720p $0.15/s (Sep 30, 2026).</p>
           </div>
@@ -299,11 +299,103 @@
           <h2 id="cta-title">Want to have your own real “unlimited” video generation on your data?</h2>
           <p class="cta__sub">Flat cost. Dedicated to you. FastH3 on your dedicated host.</p>
           <div class="cta__actions">
-            <a class="button button--dark" href="mailto:info@nuvalab.ai?subject=FastH3%20for%20my%20business">Get in touch</a>
+            <button class="button button--dark" type="button" data-survey-open>Get started · 1 min</button>
           </div>
         </div>
       </section>
     </main>
+
+    <dialog id="survey" class="survey" aria-label="FastH3 access survey">
+      <form id="survey-form" class="survey__form" action="https://nuva-website-leads.cloud-fe1.workers.dev/api/leads" method="POST" novalidate>
+        <div class="survey__progress" aria-hidden="true"><span></span></div>
+        <header class="survey__bar">
+          <img src="assets/nuvalab.svg" alt="Nuva Lab" />
+          <p class="survey__meta"><span data-survey-count>1 of 6</span> · Under 1 min</p>
+          <button class="survey__close" type="button" data-survey-close aria-label="Close survey">Close <span aria-hidden="true">✕</span></button>
+        </header>
+
+        <input type="hidden" name="form_name" value="fasth3_access_survey" />
+
+        <input type="hidden" name="page" />
+        <input type="hidden" name="utm" />
+        <input class="survey__trap" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <div class="survey__stage">
+          <section class="survey-step" data-kind="single" aria-labelledby="q-volume">
+            <p class="survey-step__num">1 <span aria-hidden="true">→</span></p>
+            <h2 id="q-volume">How many videos do you generate, or plan to?</h2>
+            <p class="survey-step__hint">A rough range is fine. One clip counts as one video.</p>
+            <div class="survey-options" role="radiogroup" aria-labelledby="q-volume">
+              <label class="survey-option"><input type="radio" name="video_volume" value="Under 100/day (<3K/month)" /><kbd>A</kbd><span>Under 100 / day<small>Less than 3K / month</small></span></label>
+              <label class="survey-option"><input type="radio" name="video_volume" value="100-1K/day (3K-30K/month)" /><kbd>B</kbd><span>100 – 1,000 / day<small>3K – 30K / month</small></span></label>
+              <label class="survey-option"><input type="radio" name="video_volume" value="1K-10K/day (30K-300K/month)" /><kbd>C</kbd><span>1,000 – 10,000 / day<small>30K – 300K / month</small></span></label>
+              <label class="survey-option"><input type="radio" name="video_volume" value="10K+/day (300K+/month)" /><kbd>D</kbd><span>10,000+ / day<small>300K+ / month</small></span></label>
+              <label class="survey-option"><input type="radio" name="video_volume" value="Not sure yet" /><kbd>E</kbd><span>Not sure yet</span></label>
+            </div>
+            <p class="survey-step__error" aria-live="polite"></p>
+          </section>
+
+          <section class="survey-step" data-kind="multi" aria-labelledby="q-needs">
+            <p class="survey-step__num">2 <span aria-hidden="true">→</span></p>
+            <h2 id="q-needs">What would you want from us?</h2>
+            <p class="survey-step__hint">Choose as many as you like.</p>
+            <div class="survey-options" role="group" aria-labelledby="q-needs">
+              <label class="survey-option"><input type="checkbox" name="needs" value="Dedicated deployment" /><kbd>A</kbd><span>Dedicated deployment<small>Reserved GPUs running FastH3 for your workload</small></span></label>
+              <label class="survey-option"><input type="checkbox" name="needs" value="Custom data" /><kbd>B</kbd><span>Custom data<small>Post-train on your footage, style, or characters</small></span></label>
+              <label class="survey-option"><input type="checkbox" name="needs" value="Custom model" /><kbd>C</kbd><span>Custom model<small>Accelerate another open-weight video model you use</small></span></label>
+              <label class="survey-option"><input type="checkbox" name="needs" value="Standard access" data-exclusive /><kbd>D</kbd><span>Standard FastH3 access is enough for now</span></label>
+            </div>
+            <p class="survey-step__error" aria-live="polite"></p>
+            <button class="survey-ok" type="button" data-survey-next>OK <span class="survey-ok__hint">press <strong>Enter ↵</strong></span></button>
+          </section>
+
+          <section class="survey-step" data-kind="text" aria-labelledby="q-name">
+            <p class="survey-step__num">3 <span aria-hidden="true">→</span></p>
+            <h2 id="q-name"><label for="survey-name">What's your name?</label></h2>
+            <input class="survey-input" id="survey-name" name="name" type="text" placeholder="Full name" autocomplete="name" required />
+            <p class="survey-step__error" aria-live="polite"></p>
+            <button class="survey-ok" type="button" data-survey-next>OK <span class="survey-ok__hint">press <strong>Enter ↵</strong></span></button>
+          </section>
+
+          <section class="survey-step" data-kind="text" aria-labelledby="q-email">
+            <p class="survey-step__num">4 <span aria-hidden="true">→</span></p>
+            <h2 id="q-email"><label for="survey-email">What's your work email<span data-first-name></span>?</label></h2>
+            <input class="survey-input" id="survey-email" name="email" type="email" placeholder="name@company.com" autocomplete="email" inputmode="email" required />
+            <p class="survey-step__error" aria-live="polite"></p>
+            <button class="survey-ok" type="button" data-survey-next>OK <span class="survey-ok__hint">press <strong>Enter ↵</strong></span></button>
+          </section>
+
+          <section class="survey-step" data-kind="text" aria-labelledby="q-company">
+            <p class="survey-step__num">5 <span aria-hidden="true">→</span></p>
+            <h2 id="q-company"><label for="survey-company">Which company are you with?</label></h2>
+            <input class="survey-input" id="survey-company" name="company" type="text" placeholder="Company name" autocomplete="organization" required />
+            <p class="survey-step__error" aria-live="polite"></p>
+            <button class="survey-ok" type="button" data-survey-next>OK <span class="survey-ok__hint">press <strong>Enter ↵</strong></span></button>
+          </section>
+
+          <section class="survey-step" data-kind="text" aria-labelledby="q-role">
+            <p class="survey-step__num">6 <span aria-hidden="true">→</span></p>
+            <h2 id="q-role"><label for="survey-role">What's your title, or what are you responsible for?</label></h2>
+            <input class="survey-input" id="survey-role" name="role" type="text" placeholder="e.g. CTO, Head of ML Infra, Creative Ops" autocomplete="organization-title" required />
+            <p class="survey-step__error" aria-live="polite"></p>
+            <div id="lead-security-check" data-sitekey="0x4AAAAAAFKjC9Jr8OUlWtjj"></div>
+            <button class="survey-ok" type="submit">Send request <span class="survey-ok__hint">press <strong>Enter ↵</strong></span></button>
+          </section>
+
+          <section class="survey-step survey-step--done" data-kind="done" aria-labelledby="q-done">
+            <p class="survey-step__num">Done</p>
+            <h2 id="q-done" tabindex="-1">Thanks<span data-first-name></span>. We'll be in touch.</h2>
+            <p class="survey-step__hint">We'll follow up at <strong data-echo-email></strong> with next steps for your volume.</p>
+            <button class="survey-ok" type="button" data-survey-close>Back to site</button>
+          </section>
+        </div>
+
+        <footer class="survey__nav">
+          <button type="button" data-survey-prev aria-label="Previous question">↑</button>
+          <button type="button" data-survey-next aria-label="Next question">↓</button>
+        </footer>
+      </form>
+    </dialog>
 
 
     <footer class="site-footer">
@@ -371,5 +463,7 @@
       });
     </script>
     <script src="/site.js" defer></script>
+  <script src="/survey.js?v=4" defer></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=nuvaTurnstileReady&amp;render=explicit" defer></script>
   </body>
 </html>

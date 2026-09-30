@@ -28,4 +28,3 @@ exclude:
   - node_modules
   - package.json
   - package-lock.json
-  - survey.js

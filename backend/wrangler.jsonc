@@ -1,0 +1,18 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "nuva-website-leads",
+  "main": "worker.mjs",
+  "account_id": "fe1b76b8c2085cc4b81100fb9688f1de",
+  "compatibility_date": "2026-09-30",
+  "workers_dev": true,
+  "send_email": [{
+    "name": "EMAIL",
+    "destination_address": "info@nuvalab.ai",
+    "allowed_sender_addresses": ["website@notify.nuvalab.ai"]
+  }],
+  "durable_objects": {
+    "bindings": [{ "name": "LIMITS", "class_name": "LeadLimit" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["LeadLimit"] }],
+  "observability": { "enabled": true, "head_sampling_rate": 1 }
+}
