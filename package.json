@@ -1,0 +1,10 @@
+{
+  "name": "nuva-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "deploy:api": "wrangler deploy --config backend/wrangler.jsonc"
+  },
+  "devDependencies": { "wrangler": "4.145.0" }
+}
