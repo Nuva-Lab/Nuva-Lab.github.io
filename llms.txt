@@ -5,6 +5,7 @@
 ## Core page
 
 - [FastH3](https://nuvalab.ai/fasth3/): MiniMax H3 post-trained and optimized by FastVideo using few-step distillation, sparse attention, and production inference work.
+- [Optimized FastH3 serving](https://haoailab.com/blogs/uniserve-fasth3): production serving runtime for FastH3 on NVIDIA Blackwell, with optional NVFP4.
 
 ## Attribution and licensing
 

@@ -3,23 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Nuva Lab works with FastVideo on FastH3, MiniMax H3 post-trained and optimized by FastVideo for production video generation." />
+    <meta name="description" content="Accelerate, customize, and integrate video models for your business. Run FastH3 on dedicated GPUs with flat, predictable hosting costs." />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href="https://nuvalab.ai/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Nuva Lab" />
-    <meta property="og:title" content="Nuva Lab | FastH3 Production Optimization" />
-    <meta property="og:description" content="FastH3 is MiniMax H3 post-trained and optimized by FastVideo for accelerated video generation." />
+    <meta property="og:title" content="Nuva Lab | Video Model Acceleration and Deployment" />
+    <meta property="og:description" content="Accelerate, customize, and integrate video models for your business. Run FastH3 on dedicated GPUs with flat, predictable hosting costs." />
     <meta property="og:url" content="https://nuvalab.ai/" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Nuva Lab | FastH3 Production Optimization" />
-    <meta name="twitter:description" content="FastH3 is MiniMax H3 post-trained and optimized by FastVideo for accelerated video generation." />
-    <title>Nuva Lab | FastH3 Production Optimization</title>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nuva Lab | Video Model Acceleration and Deployment" />
+    <meta name="twitter:description" content="Accelerate, customize, and integrate video models for your business. Run FastH3 on dedicated GPUs with flat, predictable hosting costs." />
+    <meta property="og:image" content="https://nuvalab.ai/assets/nuva-social.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Nuva Lab — Video models, accelerated, customized and integrated to your business." />
+    <meta name="twitter:image" content="https://nuvalab.ai/assets/nuva-social.png" />
+    <title>Nuva Lab | Video Model Acceleration and Deployment</title>
     <link rel="icon" href="assets/nuvalab.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Mozilla+Headline:wght@400;500;600;700&family=Mozilla+Text:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=12" />
+    <link rel="stylesheet" href="styles.css?v=18" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-69HFVL1CS6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -37,7 +42,7 @@
             "name": "Nuva Lab",
             "url": "https://nuvalab.ai/",
             "logo": "https://nuvalab.ai/assets/nuvalab.svg",
-            "description": "Nuva Lab works with FastVideo on production grounding and evaluation for FastH3."
+            "description": "Nuva Lab accelerates, customizes, deploys, and integrates video models for business. Nuva works with FastVideo on production grounding and evaluation for FastH3."
           },
           {
             "@type": "WebSite",
@@ -57,7 +62,8 @@
       </a>
       <nav class="site-nav" aria-label="Main navigation">
         <a href="/fasth3/">FastH3</a>
-        <a class="button button--cyan" href="mailto:info@nuvalab.ai">Contact</a>
+        <a href="mailto:info@nuvalab.ai">Contact</a>
+        <a class="button button--cyan" href="mailto:info@nuvalab.ai?subject=FastH3%20for%20my%20business">Get in touch</a>
       </nav>
     </header>
 
@@ -65,23 +71,33 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero__grid page-grid">
           <div class="hero__content">
-          <h1 id="hero-title">Video models, <span class="highlight">accelerated</span> and <span class="highlight">customized</span> for your production.</h1>
-          <p class="hero__intro">Production grounding and evaluation for FastH3: MiniMax H3, post-trained and optimized by FastVideo.</p>
+          <h1 id="hero-title">Video models,<br /><span class="highlight">accelerated</span>, <span class="highlight">customized</span> and <span class="highlight">integrated</span> to your business.</h1>
+          <p class="hero__intro">Flat cost. Dedicated to you.</p>
 
-          <form id="waitlist-form" class="waitlist" action="https://formspree.io/f/mbjvygwp" method="POST">
+          <div class="waitlist">
             <div class="waitlist__announcement">
               <div class="waitlist__title">
-                <label for="email">MiniMax H3 with Omni Ref Optimization</label>
-                <span class="status-badge">Pending</span>
+                <h2>Want to have your own real “unlimited” video generation on your data?</h2>
               </div>
-              <p>Coming soon. Join the waitlist for updates and customization for your needs.</p>
+              <p>FastH3 on your dedicated host. Your data, dedicated capacity, one flat hosting cost.</p>
+              <div class="price-callout">
+                <div class="price-callout__metrics">
+                  <p class="price-callout__rate"><strong>≈$0.014</strong><span>per second of 768p video</span></p>
+                  <span class="price-callout__or">or</span>
+                  <p class="price-callout__rate"><strong>≈4,000</strong><span>768p videos per day</span></p>
+                </div>
+                <ul class="price-callout__compare">
+                  <li><strong>82% less</strong> than MiniMax H3 API</li>
+                  <li><strong>90% less</strong> than Seedance 2.0 API</li>
+                </ul>
+              </div>
+              <p class="waitlist__followup">Or feeling ambitious for real-time generation?</p>
             </div>
-            <div class="waitlist__form">
-              <input id="email" name="email" type="email" placeholder="Work email" autocomplete="email" required />
-              <button type="submit">Join waitlist</button>
+            <div class="waitlist__cta">
+              <a class="button button--dark" href="mailto:info@nuvalab.ai?subject=FastH3%20for%20my%20business">Get in touch <span aria-hidden="true">→</span></a>
             </div>
-            <p id="waitlist-form-status" class="form-status" aria-live="polite"></p>
-          </form>
+            <p class="waitlist__fineprint">Illustrative GPU cost at full utilization: 8× RTX PRO 6000 × $3/hour/GPU; 10-second 768p videos with audio. Excludes service fees. API comparison: H3 768P $0.08/s; Seedance 2.0 720p $0.15/s (Sep 30, 2026).</p>
+          </div>
           </div>
         </div>
       </section>
@@ -96,23 +112,26 @@
           <article class="service-card">
             <p class="service-card__number">01</p>
             <h3>Accelerate</h3>
-            <p class="service-card__tags"><span>Post Training</span><span>Model Adaptation</span></p>
-            <p class="service-card__body">Reduce latency and serving costs with model-specific optimization tuned to your target hardware and production workload.</p>
-            <a class="service-card__link" href="/fasth3/#technical-path">FastH3 technical path <span aria-hidden="true">→</span></a>
+            <p class="service-card__tags"><span>Inference optimization</span></p>
+            <p class="service-card__body">State-of-the-art inference optimization, tuned to your hardware and workload, so every video costs less and arrives sooner.</p>
           </article>
           <article class="service-card">
             <p class="service-card__number">02</p>
             <h3>Customize</h3>
-            <p class="service-card__tags"><span>Post Training</span><span>Model Adaptation</span></p>
+            <p class="service-card__tags"><span>On your proprietary data</span></p>
             <p class="service-card__body">Adapt open models to your visual language, formats, and workflows while preserving quality and creative control.</p>
-            <a class="service-card__link" href="/fasth3/#technical-path">FastH3 post-training <span aria-hidden="true">→</span></a>
           </article>
           <article class="service-card">
             <p class="service-card__number">03</p>
             <h3>Deploy</h3>
-            <p class="service-card__tags"><span>Inference</span><span>Production Systems</span></p>
+            <p class="service-card__tags"><span>Production serving optimization</span></p>
             <p class="service-card__body">Move from weights to a dependable production service with scalable infrastructure, observability, and hands-on support.</p>
-            <a class="service-card__link" href="/fasth3/#public-evidence">FastH3 results <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="service-card">
+            <p class="service-card__number">04</p>
+            <h3>Integrate</h3>
+            <p class="service-card__tags"><span>Creative and FDE Agent for your business</span></p>
+            <p class="service-card__body">An agent that assists with, or fully automates, video asset generation, keeps your assets organized, and closes the data loop with your business so what performs shapes what gets made next.</p>
           </article>
         </div>
 
@@ -141,20 +160,24 @@
               </article>
               <article class="optimization-item">
                 <div class="optimization-item__heading">
-                  <h3>Quantization-Aware Distillation (QAD)</h3>
-                  <div class="status-stack">
-                    <span class="status-badge status-badge--ready">T2V Validated</span>
-                    <span class="status-badge">Omni Ref Pending</span>
-                  </div>
+                  <h3>Few-Step Optimization</h3>
+                  <span class="status-badge status-badge--ready">In Production</span>
                 </div>
-                <p><strong>12.5× Speedup</strong><span>50 → 4 denoising steps</span></p>
+                <p><strong>6.25× Fewer Steps</strong><span>50 → 8 sampling steps</span></p>
+              </article>
+              <article class="optimization-item">
+                <div class="optimization-item__heading">
+                  <h3>Optimized Serving Runtime</h3>
+                  <span class="status-badge status-badge--ready">In Production</span>
+                </div>
+                <p><strong>Latency and Throughput</strong><span>Full-host optimization</span></p>
               </article>
               <article class="optimization-item">
                 <div class="optimization-item__heading">
                   <h3>NVFP4 Native</h3>
-                  <span class="status-badge">Pending</span>
+                  <span class="status-badge">Optional</span>
                 </div>
-                <p>Weights / Attention / Linear</p>
+                <p><strong>Blackwell Native Precision</strong><span>Built for NVIDIA Blackwell’s native FP4 acceleration</span></p>
               </article>
             </div>
           </div>
@@ -185,16 +208,42 @@
           </header>
 
           <div class="release-list">
+            <a class="release-item" href="https://haoailab.com/blogs/uniserve-fasth3" target="_blank" rel="noopener noreferrer">
+              <div class="release-item__meta">
+                <time datetime="2026-09-29">Sep 29, 2026</time>
+                <span>Production Release</span>
+              </div>
+              <div class="release-item__content">
+                <div class="release-item__title">
+                  <h3>Optimized FastH3 Serving with Uniserve</h3>
+                  <span class="release-item__latest">Latest</span>
+                </div>
+                <p>An optimized serving runtime for FastH3 on NVIDIA Blackwell. A 10-second clip with audio renders in 6.3 s on eight GB200 GPUs (5.4 s with optional NVFP4), with 1.2–1.7× lower median latency and 15–45% higher throughput than other open-source serving stacks. Already serving production traffic at Nuva Lab.</p>
+              </div>
+              <span class="release-item__source">FastVideo</span>
+              <span class="release-item__arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="release-item" href="/fasth3/">
+              <div class="release-item__meta">
+                <time datetime="2026-09-04">Sep 04, 2026</time>
+                <span>Model Update</span>
+              </div>
+              <div class="release-item__content">
+                <h3>FastH3 8-Step V2</h3>
+                <p>The eight-step FastH3 checkpoint that production serving now runs on, trained with data-free DMD2 distillation and 80% sparse video attention.</p>
+              </div>
+              <span class="release-item__source">FastVideo</span>
+              <span class="release-item__arrow" aria-hidden="true">→</span>
+            </a>
+
             <a class="release-item" href="https://haoailab.com/blogs/fasth3-local/" target="_blank" rel="noopener noreferrer">
               <div class="release-item__meta">
                 <time datetime="2026-09-02">Sep 02, 2026</time>
                 <span>Ecosystem Update</span>
               </div>
               <div class="release-item__content">
-                <div class="release-item__title">
-                  <h3>FastH3 Goes Local</h3>
-                  <span class="release-item__latest">Latest</span>
-                </div>
+                <h3>FastH3 Goes Local</h3>
                 <p>The FastVideo ecosystem brings FastH3 to NVIDIA DGX Spark and Apple Silicon for local video generation.</p>
               </div>
               <span class="release-item__source">FastVideo</span>
@@ -247,11 +296,15 @@
 
       <section class="cta page-grid" aria-labelledby="cta-title">
         <div>
-          <h2 id="cta-title">Working with an open-weight video model?</h2>
-          <a class="button button--dark" href="mailto:info@nuvalab.ai">Talk to us</a>
+          <h2 id="cta-title">Want to have your own real “unlimited” video generation on your data?</h2>
+          <p class="cta__sub">Flat cost. Dedicated to you. FastH3 on your dedicated host.</p>
+          <div class="cta__actions">
+            <a class="button button--dark" href="mailto:info@nuvalab.ai?subject=FastH3%20for%20my%20business">Get in touch</a>
+          </div>
         </div>
       </section>
     </main>
+
 
     <footer class="site-footer">
       <p>© 2026 Nuva Lab, Inc.</p>
@@ -261,43 +314,6 @@
       </div>
     </footer>
     <script>
-      const waitlistForm = document.getElementById("waitlist-form");
-      const waitlistStatus = document.getElementById("waitlist-form-status");
-
-      waitlistForm.addEventListener("submit", async (event) => {
-        event.preventDefault();
-        const button = waitlistForm.querySelector("button");
-        button.disabled = true;
-        button.textContent = "Joining...";
-        waitlistStatus.textContent = "";
-
-        try {
-          const response = await fetch(waitlistForm.action, {
-            method: waitlistForm.method,
-            body: new FormData(waitlistForm),
-            headers: { Accept: "application/json" }
-          });
-
-          if (!response.ok) {
-            throw new Error("Request failed");
-          }
-
-          waitlistForm.reset();
-          waitlistStatus.textContent = "You're on the list. We'll be in touch.";
-          if (typeof gtag === "function") {
-            gtag("event", "generate_lead", {
-              form_name: "h3_optimization_waitlist",
-              page_location: window.location.href
-            });
-          }
-        } catch (error) {
-          waitlistStatus.textContent = "Something went wrong. Email info@nuvalab.ai instead.";
-        } finally {
-          button.disabled = false;
-          button.textContent = "Join waitlist";
-        }
-      });
-
       const demos = [...document.querySelectorAll(".video-demo")];
 
       const loadDemo = (video) => {

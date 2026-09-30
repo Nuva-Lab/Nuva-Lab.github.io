@@ -18,3 +18,14 @@ compress_html:
   blanklines: true
   profile: false
   startings: [html, head, body]
+
+# Operational source and tests are not public website content.
+exclude:
+  - backend
+  - tests
+  - README.md
+  - requirements-dev.txt
+  - node_modules
+  - package.json
+  - package-lock.json
+  - survey.js

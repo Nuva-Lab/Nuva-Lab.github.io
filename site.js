@@ -58,6 +58,7 @@ if (header) {
     <nav aria-label="Mobile navigation">
       <a href="/fasth3/">FastH3</a>
       <a href="mailto:info@nuvalab.ai">Contact</a>
+      <a href="mailto:info@nuvalab.ai?subject=FastH3%20for%20my%20business">Get in touch</a>
     </nav>
   `;
   mobileMenu.addEventListener("click", (event) => {

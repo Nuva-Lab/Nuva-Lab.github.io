@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="FastH3 is MiniMax H3 post-trained and optimized by FastVideo through few-step distillation, sparse attention, and production inference work." />
+    <meta name="description" content="FastH3 is MiniMax H3 post-trained and optimized by FastVideo through few-step distillation, sparse attention, and an optimized production serving runtime with optional NVFP4." />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href="https://nuvalab.ai/fasth3/" />
     <meta property="og:type" content="article" />
@@ -11,7 +11,11 @@
     <meta property="og:title" content="FastH3: Post-Trained and Optimized MiniMax H3 | Nuva Lab" />
     <meta property="og:description" content="FastH3 is the post-trained and optimized MiniMax H3 path produced by FastVideo." />
     <meta property="og:url" content="https://nuvalab.ai/fasth3/" />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="https://nuvalab.ai/assets/nuva-social.png" />
+    <meta name="twitter:image" content="https://nuvalab.ai/assets/nuva-social.png" />
+    <meta name="twitter:title" content="FastH3 | MiniMax H3 Production Optimization" />
+    <meta name="twitter:description" content="FastH3 brings optimized MiniMax H3 video generation to your dedicated production infrastructure." />
     <title>FastH3: Post-Trained and Optimized MiniMax H3 | Nuva Lab</title>
     <link rel="icon" href="/assets/nuvalab.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,7 +33,7 @@
             "headline": "FastH3: Post-Trained and Optimized MiniMax H3",
             "description": "FastH3 is MiniMax H3 post-trained and optimized by FastVideo using few-step distillation, sparse attention, and production inference work.",
             "datePublished": "2026-09-02",
-            "dateModified": "2026-09-02",
+            "dateModified": "2026-09-30",
             "author": {"@type":"Organization","name":"Nuva Lab","url":"https://nuvalab.ai/"},
             "publisher": {"@type":"Organization","name":"Nuva Lab","url":"https://nuvalab.ai/"},
             "mainEntityOfPage": "https://nuvalab.ai/fasth3/"
@@ -51,7 +55,7 @@
     <header class="page-header">
       <a href="/" aria-label="Nuva Lab home"><img src="/assets/nuvalab.svg" alt="Nuva Lab" /></a>
       <nav class="page-nav" aria-label="Main navigation">
-        <a href="/">Home</a><a class="button" href="mailto:info@nuvalab.ai?subject=FastH3">Contact</a>
+        <a href="/">Home</a><a href="mailto:info@nuvalab.ai?subject=FastH3">Contact</a><a class="button" href="mailto:info@nuvalab.ai?subject=FastH3%20for%20my%20business">Get in touch</a>
       </nav>
     </header>
 
@@ -63,15 +67,16 @@
             <h1>FastH3: MiniMax H3, post-trained and optimized</h1>
             <p class="hero__lead">FastH3 is the post-trained and optimized MiniMax H3 path produced by FastVideo. It combines few-step distillation, sparse attention, and inference work for accelerated synchronized video-and-audio generation. Nuva Lab contributes production grounding and workload evaluation.</p>
             <div class="hero__actions">
-              <a class="button button--dark" href="mailto:info@nuvalab.ai?subject=FastH3">Contact Nuva Lab</a>
+              <a class="button button--dark" href="mailto:info@nuvalab.ai?subject=FastH3%20for%20my%20business">Get in touch</a>
               <a class="button" href="https://haoailab.com/blogs/fasth3-preview/" target="_blank" rel="noopener noreferrer">Read the joint release</a>
             </div>
           </div>
           <aside class="hero__aside" aria-label="FastH3 release facts">
-            <div class="fact"><span>Generation path</span><strong>4 DiT calls</strong></div>
+            <div class="fact"><span>Production path (V2)</span><strong>8 DiT calls</strong></div>
             <div class="fact"><span>Video attention</span><strong>90% sparse profile</strong></div>
             <div class="fact"><span>Public 15s receipt</span><strong>&lt;13s on 8× B200</strong></div>
-            <div class="fact"><span>Framework</span><strong>FastVideo</strong></div>
+            <div class="fact"><span>Optimized serving, 10s clip</span><strong>6.3s on 8× GB200</strong></div>
+            <div class="fact"><span>NVFP4 (optional)</span><strong>+15–19% throughput</strong></div>
           </aside>
         </div>
       </section>
@@ -90,7 +95,7 @@
         <div class="feature-list">
           <article class="feature"><p class="feature__number">01</p><h3>Few-step post-training</h3><p>FastH3 reduces the original H3 denoising schedule to four transformer calls through a trained distilled path.</p></article>
           <article class="feature"><p class="feature__number">02</p><h3>Video Sparse Attention</h3><p>The recommended Preview v1 profile applies sparse execution to eligible video-to-video attention tiles.</p></article>
-          <article class="feature"><p class="feature__number">03</p><h3>Inference optimization</h3><p>FastVideo connects the trained graph to runtime, kernel, memory, and parallel execution work.</p></article>
+          <article class="feature"><p class="feature__number">03</p><h3>Serving runtime</h3><p>An optimized serving runtime runs FastH3 in production on NVIDIA Blackwell, with an optional NVFP4 checkpoint for higher throughput.</p></article>
           <article class="feature"><p class="feature__number">04</p><h3>Production evaluation</h3><p>Nuva Lab contributes workload-grounded evaluation and feedback on complete generated outputs.</p></article>
         </div>
       </section>
@@ -105,6 +110,7 @@
             <li>The published 15-second, 768p result is faster than playback on eight NVIDIA B200 GPUs.</li>
             <li>The release supports variable duration, resolution, and aspect ratio in one checkpoint.</li>
             <li>FastVideo subsequently published local paths for NVIDIA DGX Spark and Apple Silicon.</li>
+            <li>The optimized serving runtime renders a 10-second FastH3 8-Step V2 clip in 6.3 s on eight GB200 GPUs (5.4 s with NVFP4), with 1.2–1.7× lower median latency than FastVideo, SGLang, and vLLM-Omni.</li>
           </ul>
           <p class="callout"><strong>Evidence boundary</strong>These are public FastH3 release results, not a universal performance claim. Output quality and latency still depend on the exact checkpoint, workload, hardware, and complete media path.</p>
         </div>
@@ -130,13 +136,14 @@
       <section class="section section--split">
         <div><p class="eyebrow">Sources</p><h2>Technical releases and integrations</h2></div>
         <div class="link-list">
+          <a href="https://haoailab.com/blogs/uniserve-fasth3" target="_blank" rel="noopener noreferrer"><span>Optimized serving runtime for FastH3</span><span>↗</span></a>
           <a href="https://haoailab.com/blogs/fasth3-preview/" target="_blank" rel="noopener noreferrer"><span>FastH3 Preview v1 joint release</span><span>↗</span></a>
           <a href="https://haoailab.com/blogs/fasth3-local/" target="_blank" rel="noopener noreferrer"><span>FastH3 on DGX Spark and Apple Silicon</span><span>↗</span></a>
           <a href="https://vllm.ai/blog/2026-09-01-minimax-h3-production-serving" target="_blank" rel="noopener noreferrer"><span>MiniMax H3 and FastH3 on vLLM-Omni</span><span>↗</span></a>
         </div>
       </section>
 
-      <section class="conversion"><div><h2>Working with FastH3?</h2><p>Contact Nuva Lab about production-grounded evaluation and collaboration.</p><a class="button button--dark" href="mailto:info@nuvalab.ai?subject=FastH3">Contact Nuva Lab</a></div></section>
+      <section class="conversion"><div><h2>Working with FastH3?</h2><p>Tell us about your video volume and workflow. We'll follow up about deployment, customization, and access.</p><a class="button button--dark" href="mailto:info@nuvalab.ai?subject=FastH3%20for%20my%20business">Get in touch</a></div></section>
     </main>
 
     <footer class="page-footer"><p>© 2026 Nuva Lab, Inc.</p><div><a href="/">Home</a><a href="/privacy-policy.html">Privacy</a><a href="mailto:info@nuvalab.ai">Contact</a></div></footer>
