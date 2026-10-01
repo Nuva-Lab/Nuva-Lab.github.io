@@ -45,3 +45,20 @@ business fields during rollout; new submissions must include a valid pair.
 
 Deploy the compatible Worker update before publishing the new frontend. Keep the
 `survey.js` and `styles.css` query versions current when updating the form.
+
+## Social preview image
+
+The homepage and FastH3 page share the Nuva brand card. Its PNG contains rendered
+text, so changing Open Graph titles alone does not update the image. After a
+headline/subtitle change, render a new 1200×630 PNG from the homepage HTML:
+
+```sh
+python scripts/render-social-card.py --output assets/nuva-social-2026-09-30-v2.png
+```
+
+The renderer needs Pillow and Arial; use its font arguments on other platforms.
+The renderer also refreshes the legacy `assets/nuva-social.png` alias for cached
+page metadata. Use a new image filename for each copy revision and update both `og:image` and
+`twitter:image` on the two pages. Verify the image visually and fetch both the
+live HTML and image after deployment. Social platforms may also retain their
+own cached page metadata, independently of Google Search indexing.
