@@ -168,8 +168,15 @@ button.button { font-family: inherit; cursor: pointer; }
   pointer-events: none;
 }
 
-.hero__grid { position: relative; z-index: 1; }
-.hero__content { grid-column: 1 / span 10; }
+.hero__grid { position: relative; z-index: 1; row-gap: var(--space-40); align-items: start; }
+.hero__content { grid-column: 1 / span 6; min-width: 0; }
+.hero__grid > .waitlist { grid-column: 8 / -1; min-width: 0; max-width: none; }
+
+@media (max-width: 1100px) {
+  .hero__content,
+  .hero__grid > .waitlist { grid-column: 1 / -1; }
+  .hero__grid > .waitlist { max-width: 680px; }
+}
 
 h1, h2, h3, p { margin-top: 0; }
 
@@ -755,9 +762,9 @@ html:has(.survey[open]) { overflow: hidden; }
 
 /* Selected headline and agent value proposition. */
 .hero h1 { margin-bottom: 24px; }
-.hero__subtitle { max-width: 760px; margin-bottom: 40px; font-size: var(--text-20); line-height: 1.5; color: #4a5554; }
+.hero__subtitle { max-width: 760px; margin-bottom: 0; font-size: var(--text-20); line-height: 1.5; color: #4a5554; }
 @media (max-width: 560px) {
-  .hero__subtitle { font-size: var(--text-18); margin-bottom: 32px; }
+  .hero__subtitle { font-size: var(--text-18); }
 }
 
 /* Business context needs room for a short, multiline answer. */
