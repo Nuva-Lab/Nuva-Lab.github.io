@@ -37,8 +37,9 @@ frontend through a PR to roll back.
 
 The eight-step survey collects business type, a short business problem / desired
 result, video volume, service needs, and name/email/company/role. Service needs
-include Creative Agent and Business Agent alongside dedicated FastH3 and model
-customization. Business answers are included in the inquiry email, never sent
+include Creative Agent and Business Agent alongside dedicated video generation and
+model customization. Questions focus on business outcomes and workflows rather than
+a specific model; existing submission values remain stable for compatibility. Business answers are included in the inquiry email, never sent
 as analytics event properties. The API accepts legacy submissions without both
 business fields during rollout; new submissions must include a valid pair.
 
