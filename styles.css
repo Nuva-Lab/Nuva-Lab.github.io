@@ -269,7 +269,7 @@ h1 {
 .section-heading h2 { grid-column: 1 / span 4; margin: 0; font-size: var(--text-32); }
 .section-heading p { grid-column: 5 / -1; margin: 0; font-size: var(--text-24); }
 
-.service-grid { display: grid; grid-template-columns: repeat(4, 1fr); max-width: var(--content-max); margin-inline: auto; border-inline: 1px solid var(--color-outline); border-bottom: 1px solid var(--color-outline); }
+.service-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); max-width: var(--content-max); margin-inline: auto; border-inline: 1px solid var(--color-outline); border-bottom: 1px solid var(--color-outline); }
 .service-card { min-height: 310px; padding: var(--space-32) var(--space-24); }
 .service-card + .service-card { border-left: 1px solid var(--color-outline); }
 .service-card__number { margin-bottom: var(--space-4); color: var(--color-cyan-dark); font-family: var(--font-mono); font-size: var(--text-24); font-weight: var(--weight-semibold); }
@@ -744,3 +744,23 @@ html:has(.survey[open]) { overflow: hidden; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+/* Self-improve preview: a fifth stage in the existing production workflow. */
+.service-card__number { display: flex; align-items: center; justify-content: space-between; }
+.service-card__icon { flex: none; opacity: 0.72; }
+@media (min-width: 821px) and (max-width: 1100px) {
+  .service-card--improve { grid-column: 1 / -1; min-height: auto; }
+  .service-card--improve .service-card__body { max-width: 760px; }
+}
+
+/* Selected headline and agent value proposition. */
+.hero h1 { margin-bottom: 24px; }
+.hero__subtitle { max-width: 760px; margin-bottom: 40px; font-size: var(--text-20); line-height: 1.5; color: #4a5554; }
+@media (max-width: 560px) {
+  .hero__subtitle { font-size: var(--text-18); margin-bottom: 32px; }
+}
+
+/* Business context needs room for a short, multiline answer. */
+.survey-input--long { min-height: 156px; resize: vertical; font-size: var(--text-18); line-height: 1.5; }
+.survey-input--long::placeholder { color: #737d7b; }
+.survey-step__keyboard { margin: 10px 0 0; font-size: 0.8125rem; }
