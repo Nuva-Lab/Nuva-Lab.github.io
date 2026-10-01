@@ -22,6 +22,7 @@ compress_html:
 # Operational source and tests are not public website content.
 exclude:
   - backend
+  - scripts
   - tests
   - README.md
   - requirements-dev.txt
