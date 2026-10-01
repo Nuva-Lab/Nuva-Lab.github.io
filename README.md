@@ -10,7 +10,8 @@ binding. Recipient is fixed to `info@nuvalab.ai`, sender to
 `website@notify.nuvalab.ai`; the visitor email is a validated Reply-To.
 
 Turnstile verification checks the production hostname and action. The API
-rejects extra fields, control characters and payloads over 8 KiB. Durable
+rejects extra fields, control characters and payloads over 8 KiB. Newlines are
+allowed only in the business-goal answer and indented in the plain-text email. Durable
 Objects enforce 10 attempts/IP/10 minutes, 3 submissions/email/hour and 100
 submissions/day globally. Rate-limit keys use hashed values and expire through
 alarms. Logs contain receipt IDs, not contact details or challenge tokens.
@@ -33,3 +34,13 @@ Publish frontend changes through an authorized PR merge, wait for GitHub Pages
 and verify the live page. Backend source, tests and dependencies are excluded
 from the generated static site. Redeploy a prior Worker revision and revert the
 frontend through a PR to roll back.
+
+The eight-step survey collects business type, a short business problem / desired
+result, video volume, service needs, and name/email/company/role. Service needs
+include Creative Agent and Business Agent alongside dedicated FastH3 and model
+customization. Business answers are included in the inquiry email, never sent
+as analytics event properties. The API accepts legacy submissions without both
+business fields during rollout; new submissions must include a valid pair.
+
+Deploy the compatible Worker update before publishing the new frontend. Keep the
+`survey.js` and `styles.css` query versions current when updating the form.

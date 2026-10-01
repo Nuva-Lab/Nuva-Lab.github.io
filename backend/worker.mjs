@@ -3,8 +3,9 @@ const SENDER = "website@notify.nuvalab.ai";
 const ORIGINS = new Set(["https://nuvalab.ai", "https://www.nuvalab.ai"]);
 const HOSTS = new Set(["nuvalab.ai", "www.nuvalab.ai"]);
 export const VOLUMES = new Set(["Under 100/day (<3K/month)", "100-1K/day (3K-30K/month)", "1K-10K/day (30K-300K/month)", "10K+/day (300K+/month)", "Not sure yet"]);
-const NEEDS = new Set(["Dedicated deployment", "Custom data", "Custom model", "Standard access"]);
-const ALLOWED = new Set(["name", "email", "company", "role", "video_volume", "needs", "page", "utm", "_gotcha", "token"]);
+export const NEEDS = new Set(["Dedicated deployment", "Custom data", "Custom model", "Creative agent", "Business agent", "Standard access"]);
+export const BUSINESS_TYPES = new Set(["Agency / marketing", "Brand / e-commerce", "Games / interactive entertainment", "Studio / short drama / content", "AI product / platform", "Other / exploring"]);
+const ALLOWED = new Set(["name", "email", "company", "role", "video_volume", "needs", "business_type", "business_goal", "page", "utm", "_gotcha", "token"]);
 
 function reply(status, message, origin, requestId) {
   const headers = { "Content-Type": "application/json", "Cache-Control": "no-store", "X-Content-Type-Options": "nosniff", Vary: "Origin" };
@@ -22,8 +23,17 @@ export function validate(data) {
   const lead = Object.fromEntries(Object.entries({ name: 100, email: 254, company: 150, role: 150, video_volume: 80 }).map(([key, size]) => [key, clean(data[key], size)]));
   if (!/^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9](?:[A-Za-z0-9.-]*[A-Za-z0-9])?\.[A-Za-z]{2,63}$/.test(lead.email)) throw new Error("Invalid email");
   if (!VOLUMES.has(lead.video_volume)) throw new Error("Invalid volume");
-  if (!Array.isArray(data.needs) || !data.needs.length || data.needs.length > 4 || data.needs.some(n => !NEEDS.has(n)) || new Set(data.needs).size !== data.needs.length || (data.needs.includes("Standard access") && data.needs.length !== 1)) throw new Error("Invalid needs");
+  if (!Array.isArray(data.needs) || !data.needs.length || data.needs.length > NEEDS.size || data.needs.some(n => !NEEDS.has(n)) || new Set(data.needs).size !== data.needs.length || (data.needs.includes("Standard access") && data.needs.length !== 1)) throw new Error("Invalid needs");
   lead.needs = data.needs.join(", ");
+  // Optional for cached older frontends during a rolling deployment.
+  // A new frontend sends both fields; partial or empty business context is invalid.
+  if (data.business_type !== undefined || data.business_goal !== undefined) {
+    if (!BUSINESS_TYPES.has(data.business_type)) throw new Error("Invalid business type");
+    const goal = data.business_goal;
+    if (typeof goal !== "string" || !goal.trim() || goal.length > 1000 || /[\x00-\x09\x0b-\x1f\x7f]/.test(goal)) throw new Error("Invalid business goal");
+    lead.business_type = data.business_type;
+    lead.business_goal = goal.trim();
+  }
   for (const key of ["page", "utm"]) {
     const value = data[key] ?? "";
     if (typeof value !== "string" || value.length > 500 || /[\x00-\x1f\x7f]/.test(value)) throw new Error("Invalid attribution");
@@ -105,7 +115,7 @@ export default {
       if (result.success !== true || !HOSTS.has(result.hostname) || result.action !== "website_lead") return reply(403, "Please complete the security check", origin);
       if (!await allow(env, "email:" + await digest(lead.email.toLowerCase()), 3, 3600) || !await allow(env, "all", 100, 86400)) return reply(429, "Please try again later or email info@nuvalab.ai", origin);
       const requestId = crypto.randomUUID();
-      const text = "Nuva website contact request\n\n" + Object.entries(lead).map(([key, value]) => `${key}: ${value}`).join("\n") + `\n\nReference: ${requestId}\n`;
+      const text = "Nuva website contact request\n\n" + Object.entries(lead).map(([key, value]) => `${key}: ${String(value).replace(/\n/g, "\n  ")}`).join("\n") + `\n\nReference: ${requestId}\n`;
       // Fixed envelope + plain text; visitor fields cannot become recipients, headers, HTML or code.
       const sent = await env.EMAIL.send({ to: RECIPIENT, from: SENDER, replyTo: lead.email, subject: "Nuva website: new business inquiry", text });
       if (!sent?.messageId) throw new Error("Missing delivery receipt");

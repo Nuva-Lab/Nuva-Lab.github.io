@@ -11,7 +11,7 @@ if (survey) {
   const prevButton = form.querySelector("[data-survey-prev]");
   const navNext = form.querySelector(".survey__nav [data-survey-next]");
   const submitButton = form.querySelector('button[type="submit"]');
-  const letters = "ABCDE";
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   // Deliberately loose: the browser's type=email check rejects real addresses typed through IMEs.
   const EMAIL = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
   let current = 0;
@@ -53,9 +53,11 @@ if (survey) {
       setError(step, picked ? "" : kind === "single" ? "Pick one to continue." : "Pick at least one to continue.");
       return Boolean(picked);
     }
-    const invalid = [...step.querySelectorAll("input")].find((input) => {
+    const invalid = [...step.querySelectorAll("input, textarea")].find((input) => {
       // NFKC folds full-width characters from CJK IMEs (＠ → @, ． → .) and drops stray spaces.
-      input.value = input.value.normalize("NFKC").replace(/\s+/g, input.type === "email" ? "" : " ").trim();
+      input.value = input.tagName === "TEXTAREA"
+        ? input.value.normalize("NFKC").replace(/\r\n?/g, "\n").trim()
+        : input.value.normalize("NFKC").replace(/\s+/g, input.type === "email" ? "" : " ").trim();
       if (input.type === "email") return !EMAIL.test(input.value);
       return input.required && !input.value;
     });
@@ -119,7 +121,7 @@ if (survey) {
 
     const fields = new FormData(form);
     const needs = fields.getAll("needs");
-    const data = Object.fromEntries(["name", "email", "company", "role", "video_volume", "page", "utm", "_gotcha"].map(key => [key, fields.get(key) || ""]));
+    const data = Object.fromEntries(["name", "email", "company", "role", "business_type", "business_goal", "video_volume", "page", "utm", "_gotcha"].map(key => [key, fields.get(key) || ""]));
     data.needs = needs;
     data.token = challengeToken;
 
@@ -239,6 +241,8 @@ if (survey) {
     if (event.isComposing || event.metaKey || event.ctrlKey || event.altKey) return;
     const step = steps[current];
     const inTextField = event.target.matches(".survey-input");
+
+    if (event.key === "Enter" && event.target.tagName === "TEXTAREA") return;
 
     if (event.key === "Enter" && !event.shiftKey) {
       if (event.target.closest("[data-survey-close], [data-survey-prev], a")) return;
